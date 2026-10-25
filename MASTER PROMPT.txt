@@ -1,0 +1,984 @@
+MASTER PROMPT: BUILD WeNaijaHealth
+
+1. ROLE AND MISSION
+
+Act as a senior full-stack engineer, health-tech product architect, UI/UX designer, database engineer, and Nigerian health insurance systems specialist.
+
+Build a functional, mobile-first web application called WeNaijaHealth.
+
+Official name: WeNaijaHealth
+Domain: wenaijahealth.com.ng
+Campaign: Protect What Matters
+Tagline: Your Work Shouldn't Cost You Your Health.
+
+WeNaijaHealth is a digital health insurance access and enrolment-support platform designed for Nigeria's informal workforce, including market women, traders, artisans, petty traders, self-employed individuals, and other social and informal workers.
+
+The platform should make health insurance easier to understand, easier to register for, and more accessible to people who face financial, literacy, language, and digital barriers.
+
+Our model combines:
+
+1. Simple, multilingual health insurance education.
+2. Digital registration and eligibility guidance.
+3. Connection to the National Health Insurance Authority (NHIA) and state health insurance schemes.
+4. Financial assistance through a flexible reimbursement model, subject to programme rules and available funding.
+5. Community-based registration through approved POS operators and registration assistants.
+6. SMS and email notifications after registration.
+7. Enrolment tracking and follow-up.
+8. An administrative dashboard for managing participants, scheme referrals, reimbursements, and impact.
+
+Build a real application, not merely a landing page or a collection of static mockups.
+
+Where official agency integration, payment processing, or SMS/email credentials are unavailable, implement the necessary architecture and clearly indicate what requires configuration or authorisation.
+
+---
+
+2. UNDERSTAND OUR USERS
+
+Our primary users are people who may not be comfortable using complicated websites.
+
+Examples include:
+
+- A market woman who sells tomatoes.
+- A trader who owns a small shop.
+- A tailor or mechanic.
+- A petty trader who earns money daily.
+- A self-employed worker with irregular income.
+- An informal worker who cannot afford a large upfront insurance contribution.
+- A person who speaks Hausa, Yoruba, or Igbo more comfortably than English.
+
+Do not design the platform as though every user has a university education, a bank card, a smartphone with fast internet, or a fixed monthly salary.
+
+The experience must be understandable to someone using a basic Android phone with limited digital literacy.
+
+Product principle: If a market woman cannot understand how to use the platform without technical assistance, simplify the interface.
+
+---
+
+3. BRAND IDENTITY AND DESIGN
+
+Create a clean, credible, welcoming Nigerian health-tech brand.
+
+Recommended visual direction
+
+- Primary colour: deep green.
+- Secondary colour: teal.
+- Background: white and light grey.
+- Accent: warm orange or yellow for important actions.
+- Typography: highly readable, accessible fonts.
+- Components: rounded cards, large buttons, clear forms, simple icons.
+- Imagery: authentic Nigerian market workers, artisans, families, and community healthcare settings.
+
+Create a simple WeNaijaHealth logo concept combining healthcare, protection, and community.
+
+The website must look professional enough for government agencies, donors, healthcare institutions, and potential partners while remaining approachable for informal workers.
+
+Avoid:
+
+- Excessive animations.
+- Complicated dashboards for ordinary users.
+- Small text.
+- Medical jargon.
+- Long registration forms.
+- Unnecessary account creation.
+- Fake testimonials and fabricated statistics.
+
+Use responsive layouts for mobile phones, tablets, and desktop computers.
+
+---
+
+4. MULTILINGUAL EXPERIENCE — A CORE REQUIREMENT
+
+Support these four languages throughout the application:
+
+1. English.
+2. Yoruba.
+3. Hausa.
+4. Igbo.
+5. Pidgin.
+
+This must be a genuine multilingual experience, not a language selector that changes only the homepage heading.
+
+Translate:
+
+- Navigation.
+- Homepage content.
+- Registration forms.
+- Validation errors.
+- Buttons.
+- Insurance explanations.
+- Eligibility questions.
+- Reimbursement information.
+- Consent statements.
+- SMS and email templates.
+- Help instructions.
+- Registration status messages.
+- Frequently asked questions.
+- Assistant dashboard instructions where relevant.
+
+Language behaviour
+
+Display a prominent language selector when the user first visits the website.
+
+Ask:
+
+"Which language would you prefer?"
+
+Present four large options with their names clearly written.
+
+Allow users to change their language at any time.
+
+Save their language preference so they do not need to select it every time.
+
+Use an internationalisation framework and organised translation files. Do not scatter hard-coded translations throughout the codebase.
+
+Have translations for insurance and financial terminology reviewed by competent speakers before production use.
+
+Where a translated explanation is uncertain, provide a clear route to human assistance rather than giving potentially misleading information.
+
+---
+
+5. HOMEPAGE
+
+Build a conversion-focused homepage with the following content.
+
+Hero section
+
+Headline:
+
+Your Work Shouldn't Cost You Your Health.
+
+Supporting text:
+
+"Whether you sell in a market, run a small business, or work for yourself, understanding health insurance should not be difficult. WeNaijaHealth helps you explore your options, find official registration pathways, and get support through the process."
+
+Primary button:
+
+Get Started
+
+Secondary button:
+
+Find Health Insurance
+
+Additional link:
+
+I Need Help Registering
+
+Explain the process
+
+Display three simple steps:
+
+1. Tell Us About Yourself
+
+Answer a few simple questions about your location and work.
+
+2. Explore Your Options
+
+Discover relevant health insurance programmes and learn about eligibility, costs, and available assistance.
+
+3. Get Connected
+
+Follow the appropriate official registration process and find out whether you qualify for available financial assistance.
+
+Additional sections
+
+- Who We Help.
+- How WeNaijaHealth Works.
+- Understand Health Insurance.
+- Explore Available Schemes.
+- Flexible Payment and Reimbursement Support.
+- Get Help Near Your Market.
+- Frequently Asked Questions.
+- Contact and Support.
+
+Clearly explain that financial assistance and reimbursement are subject to eligibility, programme rules, funding, and approval.
+
+Do not promise free insurance or guaranteed reimbursement to everyone.
+
+---
+
+6. SIMPLE REGISTRATION FOR INFORMAL WORKERS
+
+This is one of the most important features.
+
+Build a guided registration experience using short screens, simple words, and large buttons.
+
+Avoid presenting users with a long form containing dozens of fields.
+
+Use a progress indicator such as:
+
+Step 1 of 5 — About You
+
+Step 1: Basic information
+
+Collect only necessary information, potentially including:
+
+- Full name.
+- Preferred language.
+- Phone number.
+- Email address, if available.
+- State.
+- Local government area.
+- Community or market.
+- Preferred contact method.
+
+Email must not be mandatory if a participant does not have an email address.
+
+Do not reject a user simply because they lack an email address.
+
+Step 2: Work information
+
+Ask:
+
+"What kind of work do you do?"
+
+Provide large, selectable options:
+
+- Market trader.
+- Shop owner.
+- Petty trader.
+- Artisan.
+- Farmer.
+- Food seller.
+- Transport worker.
+- Self-employed.
+- Other informal work.
+
+Allow the user to select "Other" and describe their work in simple terms.
+
+Do not require formal employment records, a salary slip, a business registration certificate, or proof of a formal employer unless a specific programme legitimately requires it.
+
+Step 3: Current health insurance situation
+
+Ask:
+
+"Do you currently have health insurance?"
+
+Options:
+
+- Yes.
+- No.
+- I am not sure.
+
+If yes, ask which scheme they use, where known.
+
+If no or unsure, continue to scheme discovery.
+
+Step 4: Household and coverage needs
+
+Ask only questions relevant to the available insurance schemes.
+
+For example:
+
+- Are you looking for coverage for yourself?
+- Are you interested in coverage for eligible family members?
+
+Collect age, household information, identity details, or other eligibility data only when required by a specific scheme.
+
+Do not invent universal eligibility requirements.
+
+Step 5: Consent and review
+
+Explain in the user's selected language:
+
+- Why the information is being collected.
+- Which organisation may receive it.
+- How it will be used.
+- Whether financial assistance is being requested.
+- How to request help.
+- How to access the privacy policy.
+
+Provide separate consent options where appropriate for:
+
+1. Creating a WeNaijaHealth account or registration record.
+2. Sharing relevant information with an identified insurance scheme.
+3. Requesting reimbursement or financial assistance.
+4. Receiving SMS and email communications.
+
+Do not use one vague consent checkbox to authorise every purpose.
+
+Let the user review their information before submission.
+
+After submission, generate a unique WeNaijaHealth reference number.
+
+Example:
+
+Your reference number: WNH-2026-000123
+
+Use a unique, securely generated reference in the real implementation rather than hard-coding this example.
+
+Display:
+
+"Thank you for registering with WeNaijaHealth. We will help you understand the next steps. Your insurance enrolment and coverage must still be confirmed by the relevant authorised scheme."
+
+---
+
+7. FLEXIBLE REIMBURSEMENT AND FINANCIAL ASSISTANCE
+
+Build a dedicated module for WeNaijaHealth's proposed flexible reimbursement model.
+
+Our intended approach
+
+We want to help eligible informal workers overcome the financial barrier to accessing health insurance.
+
+Depending on the participant's eligibility, the available funding, and the agreement with the relevant scheme, WeNaijaHealth may support payment of an approved insurance contribution and allow the participant to reimburse WeNaijaHealth flexibly.
+
+The purpose is to reduce the need for a participant to provide the entire contribution upfront.
+
+Important: This is a proposed financial assistance model. Do not represent it as universally available, and do not promise that coverage begins before the scheme confirms activation.
+
+Participant experience
+
+After a user completes the initial registration, show:
+
+"Would you like to explore financial assistance with your health insurance contribution?"
+
+Options:
+
+- Yes, I need assistance.
+- I can pay the contribution myself.
+- I would like to understand my options first.
+
+If they request assistance, ask a few simple questions.
+
+Examples:
+
+- What amount could you comfortably repay?
+- How often would you prefer to make payments?
+- Would weekly or monthly payments be easier?
+- Would you like to discuss a suitable arrangement with our team?
+
+Do not automatically assume that every market worker receives a fixed income.
+
+Allow flexible schedules that reflect irregular earnings, subject to the programme's approved terms.
+
+Do not automatically approve an amount or payment schedule without the required eligibility and affordability review.
+
+Reimbursement options
+
+Support configurable arrangements such as:
+
+- Weekly payments.
+- Monthly payments.
+- Other approved flexible schedules.
+- Sponsored contributions, where a sponsor has committed funding.
+- Subsidised enrolment, where a programme provides an approved subsidy.
+
+These are potential arrangements, not guaranteed options for every participant.
+
+Reimbursement dashboard for participants
+
+Show:
+
+- Approved assistance amount.
+- Insurance contribution amount, where verified.
+- Amount paid on the participant's behalf.
+- Amount reimbursed.
+- Outstanding balance.
+- Agreed repayment schedule.
+- Next payment date.
+- Payment history.
+- Current assistance status.
+- Contact information for support.
+
+Use simple explanations instead of complex financial terminology.
+
+For example:
+
+"You have reimbursed ₦2,000 of your approved ₦10,000 assistance amount. Your remaining balance is ₦8,000."
+
+Only show such figures when supported by actual transaction records.
+
+Financial status values
+
+Use statuses such as:
+
+- Assistance requested.
+- Under review.
+- Awaiting approval.
+- Approved.
+- Payment to scheme pending.
+- Payment confirmed.
+- Repayment schedule agreed.
+- Repayment in progress.
+- Fully reimbursed.
+- Declined.
+- Cancelled.
+
+Do not confuse the participant's reimbursement status with their insurance coverage status.
+
+Financial controls
+
+The system must:
+
+- Keep a complete transaction ledger.
+- Record payment references.
+- Prevent duplicate transactions.
+- Require authorisation for financial approvals.
+- Record who approved each transaction.
+- Reconcile payments against evidence.
+- Support refunds and reversals.
+- Protect against unauthorised changes.
+- Keep an audit trail.
+
+Do not process real payments until a suitable payment provider and approved financial workflow have been configured.
+
+Do not present WeNaijaHealth as a licensed lender, insurer, or financial institution unless it has the necessary authorisations.
+
+Before launching this model, obtain legal and regulatory review and establish agreements covering the funds, repayments, defaults, cancellations, and responsibility for coverage.
+
+---
+
+8. INSURANCE SCHEME DIRECTORY
+
+Create a database-backed directory of relevant health insurance schemes.
+
+Prioritise:
+
+- National Health Insurance Authority programmes.
+- Kwara State health insurance programmes.
+- Other state health insurance schemes as they are verified and added.
+
+For each scheme, display:
+
+- Official name.
+- Jurisdiction.
+- Intended beneficiaries.
+- Eligibility requirements.
+- Contribution or premium.
+- Benefits and limitations.
+- Participating facilities.
+- Registration procedure.
+- Official registration link.
+- Contact details, where verified.
+- Source of information.
+- Last verification date.
+
+Use the official NHIA website as a starting point for verification:
+
+https://www.nhia.gov.ng/
+
+Do not assume every programme administered by or associated with the NHIA uses the same enrolment process.
+
+Do not invent state scheme websites or registration portals.
+
+Build an administrative interface for adding new states and schemes without changing the application code.
+
+State-based user experience
+
+When a participant selects their state, show the relevant verified programmes.
+
+For Kwara State, prioritise verified Kwara-specific registration pathways.
+
+For other states, show only verified information.
+
+If information is unavailable, explain that the team needs to verify the relevant programme and provide a way to request assistance.
+
+---
+
+9. AGENCY CONNECTION AND SECURE DATA TRANSFER
+
+WeNaijaHealth intends to establish working relationships with the NHIA, Kwara State health insurance authorities, and other state schemes.
+
+Design the architecture to support authorised data transfer.
+
+Preferred integration hierarchy
+
+1. Official API integration where the agency provides an API and authorises its use.
+2. An approved secure referral or partner portal.
+3. An authorised manual registration process where digital integration is unavailable.
+
+Do not scrape private systems, bypass agency security, or automatically submit personal data to an unapproved endpoint.
+
+Integration requirements
+
+For every participating agency, define:
+
+- Approved data fields.
+- Consent requirements.
+- Authentication method.
+- Secure transmission protocol.
+- Request and response format.
+- Error handling.
+- Duplicate detection.
+- Enrolment status mapping.
+- Reference-number mapping.
+- Audit logging.
+- Data retention rules.
+
+Build an agency integration adapter so that different state schemes can use different interfaces without requiring the entire platform to be rewritten.
+
+Enrolment status
+
+Display separate statuses for:
+
+- WeNaijaHealth registration completed.
+- Information reviewed.
+- Eligibility assessment pending.
+- Submitted to the agency.
+- Agency processing.
+- Agency approval confirmed.
+- Insurance coverage active.
+- Registration declined or incomplete.
+
+Only the relevant agency or an authorised source can confirm official enrolment and coverage.
+
+Do not show a participant as insured just because their information has been entered into WeNaijaHealth.
+
+---
+
+10. POS OPERATOR AND COMMUNITY REGISTRATION ASSISTANTS
+
+Build a dedicated assistant portal.
+
+The purpose is to make registration assistance available close to where informal workers live and work.
+
+Assistant registration
+
+Collect:
+
+- Name or business name.
+- Phone number.
+- Preferred language.
+- State and service location.
+- POS or community assistant details, where applicable.
+- Verification documents only when justified and securely handled.
+
+Assistant accounts must be reviewed and approved before being publicly presented as authorised registration assistants.
+
+Assistant dashboard
+
+Display:
+
+- Total participants assisted.
+- New assistance requests.
+- Pending registrations.
+- Referrals submitted.
+- Confirmed registrations.
+- Cases requiring follow-up.
+- Incentive balance, where applicable.
+- Payment history.
+
+Assisted registration workflow
+
+1. Help the participant understand health insurance.
+2. Explain the relevant verified scheme.
+3. Obtain appropriate consent.
+4. Help the participant navigate the official registration channel.
+5. Record a referral reference.
+6. Track progress.
+7. Record agency confirmation when available.
+8. Assist with follow-up.
+
+Assistants must not ask for a participant's password, OTP, banking PIN, or unnecessary medical information.
+
+Proposed POS incentive
+
+Allow the administrator to configure a proposed incentive of ₦2,000 per verified, successfully registered participant.
+
+Do not treat the incentive as earned simply because the assistant creates a record.
+
+Require evidence of successful registration and administrator approval, according to the rules agreed with the relevant scheme and programme funder.
+
+The incentive must remain configurable and may be disabled until the operating model is approved.
+
+---
+
+11. SMS AND EMAIL NOTIFICATIONS
+
+After registration, send the participant a confirmation by SMS and, where an email address is provided, email.
+
+This is a required feature.
+
+Registration confirmation SMS
+
+Create a multilingual template similar to:
+
+"Thank you for registering with WeNaijaHealth. Your reference number is {reference_number}. We will guide you through the next steps. This message does not confirm that your health insurance is active. For help, contact {support_contact}."
+
+Translate and review the template in Yoruba, Hausa, and Igbo.
+
+Registration confirmation email
+
+Subject: Your WeNaijaHealth Registration Confirmation
+
+Include:
+
+- Participant's first name, where available.
+- Reference number.
+- Registration date.
+- A brief explanation of the next steps.
+- Link to check registration status.
+- Contact information for support.
+- A clear note explaining that registration with WeNaijaHealth does not itself activate insurance coverage.
+
+Additional notifications
+
+Support configurable messages for:
+
+- Registration received.
+- Additional information required.
+- Referral submitted to a scheme.
+- Enrolment confirmed by the scheme.
+- Financial assistance approved.
+- Payment made to an authorised scheme.
+- Reimbursement schedule agreed.
+- Upcoming reimbursement payment.
+- Reimbursement received.
+- Follow-up required.
+
+Only send messages when the underlying status or transaction actually changes.
+
+Notification architecture
+
+Use a reliable SMS provider and email service, configured through environment variables.
+
+Implement:
+
+- Reusable notification templates.
+- Language-specific templates.
+- Delivery status tracking where supported.
+- Retry handling.
+- Duplicate prevention.
+- Failure logging.
+- User communication preferences.
+- Consent and opt-out handling where applicable.
+
+Do not simulate successful SMS delivery when the provider is not configured.
+
+If the SMS or email service is unavailable, record the notification as pending or failed and show the appropriate status to administrators.
+
+Do not require an email address from users who do not have one.
+
+---
+
+12. ADMINISTRATOR DASHBOARD
+
+Build a secure dashboard for the WeNaijaHealth team.
+
+Overview metrics
+
+Display:
+
+- Total registered participants.
+- Registrations by state.
+- Registrations by occupation.
+- Preferred languages.
+- Assistance requests.
+- Scheme referrals.
+- Enrolments awaiting agency confirmation.
+- Confirmed enrolments.
+- Participants with active coverage, where confirmed.
+- Financial assistance requests.
+- Approved assistance amounts.
+- Payments made to schemes.
+- Outstanding participant reimbursements.
+- Amount reimbursed.
+- Active community assistants.
+- Verified POS-assisted registrations.
+- SMS and email delivery status.
+
+Every metric must be based on real records.
+
+Do not fabricate dashboard numbers.
+
+Participant management
+
+Allow authorised staff to:
+
+- Search participants.
+- Filter by state, occupation, language, or status.
+- Review registration records.
+- Review consent records.
+- Track agency referrals.
+- Review enrolment status.
+- View financial assistance requests.
+- Assign follow-up tasks.
+- Record support interactions.
+- Export appropriately protected reports.
+
+Financial management
+
+Provide:
+
+- Assistance request review.
+- Approval and rejection workflows.
+- Scheme payment records.
+- Reimbursement schedules.
+- Payment reconciliation.
+- Transaction ledger.
+- Outstanding balance reports.
+- POS incentive approvals.
+- Financial audit logs.
+
+Require additional confirmation before high-impact financial actions.
+
+Scheme management
+
+Allow administrators to:
+
+- Add schemes.
+- Update eligibility rules.
+- Manage registration links.
+- Record official sources.
+- Set verification dates.
+- Configure referral methods.
+- Configure authorised integrations.
+- Map agency enrolment statuses.
+- Disable outdated schemes.
+
+User permissions
+
+Use role-based access for:
+
+- Super administrator.
+- Registration administrator.
+- Financial administrator.
+- Community assistant.
+- Read-only reporting user.
+
+A community assistant must not have unrestricted access to all participants or financial records.
+
+---
+
+13. DATA MODEL
+
+Design a secure relational database.
+
+Include entities for:
+
+- Users.
+- ParticipantProfiles.
+- Occupations.
+- Languages.
+- ConsentRecords.
+- InsuranceSchemes.
+- SchemeEligibilityRules.
+- OfficialRegistrationLinks.
+- HealthcareFacilities.
+- SchemeFacilityRelationships.
+- EnrolmentApplications.
+- AgencyReferrals.
+- AgencyStatusHistory.
+- FinancialAssistanceApplications.
+- AssistanceApprovals.
+- ReimbursementSchedules.
+- ReimbursementTransactions.
+- SchemePaymentTransactions.
+- CommunityAssistants.
+- AssistantVerification.
+- POSLocations.
+- AssistedRegistrationRecords.
+- IncentiveRules.
+- IncentiveLedger.
+- NotificationTemplates.
+- NotificationLogs.
+- FollowUpTasks.
+- SupportInteractions.
+- AuditLogs.
+
+Use unique identifiers, timestamps, appropriate indexes, foreign keys, and database transactions for financial operations.
+
+Store monetary values as integer minor currency units where appropriate, or use a robust decimal representation. Never use floating-point arithmetic for financial balances.
+
+Track the source of important status changes and the user or system that made them.
+
+---
+
+14. SECURITY AND DATA PROTECTION
+
+The platform will process personal information in Nigeria.
+
+Implement privacy by design and consider the requirements of the Nigeria Data Protection Act 2023 and other applicable rules.
+
+Required controls:
+
+- Data minimisation.
+- Explicit, understandable consent.
+- Role-based access control.
+- Secure authentication.
+- Server-side authorisation.
+- Password hashing through a reputable authentication system.
+- Input validation.
+- Rate limiting.
+- Secure session handling.
+- Protection against common web vulnerabilities.
+- Encryption in transit.
+- Appropriate encryption at rest.
+- Secure secret management.
+- Audit logging.
+- Data retention and deletion procedures.
+- Restricted access to financial information.
+- Protected backups.
+- Secure data export.
+- Appropriate incident-response procedures.
+
+Do not collect sensitive identification documents unless necessary for a legitimate registration process and appropriately protected.
+
+Never collect or store insurance portal passwords, OTPs, banking PINs, or unnecessary medical records.
+
+Do not send personal or sensitive information in SMS or email messages beyond what is necessary.
+
+Do not claim legal compliance has been certified without a proper assessment.
+
+---
+
+15. TECHNICAL STACK
+
+If no existing codebase is provided, use:
+
+Frontend
+
+- Next.js with App Router.
+- TypeScript.
+- Tailwind CSS.
+- Accessible UI components.
+- A proper internationalisation framework.
+
+Backend
+
+- Next.js server-side APIs or an appropriate backend service.
+- PostgreSQL.
+- Prisma ORM.
+- Zod validation.
+- Secure authentication and role management.
+
+Additional services
+
+- An email provider such as Resend, subject to configuration.
+- An SMS gateway suitable for Nigerian numbers.
+- An authorised payment provider, if required for the approved reimbursement model.
+- An AI provider for the insurance assistant, if enabled.
+- A monitoring and error-logging service.
+
+Use environment variables for all credentials.
+
+Create an ".env.example" file without real secrets.
+
+If the development environment requires a different stack, inspect the available environment and choose a compatible implementation.
+
+If a codebase already exists, inspect it and preserve its working architecture rather than rebuilding unnecessarily.
+
+---
+
+16. MVP DELIVERY PRIORITIES
+
+Build the application in the following order.
+
+Phase 1: Core experience
+
+- Responsive homepage.
+- Language selector.
+- English, Yoruba, Hausa, and Igbo translations.
+- Simple participant registration.
+- Registration reference number.
+- SMS and email confirmation architecture.
+- Basic insurance education.
+- Verified scheme directory.
+
+Phase 2: Enrolment pathways
+
+- Scheme finder.
+- Official registration links.
+- Agency referral records.
+- Enrolment status tracking.
+- Community assistance requests.
+- Follow-up dashboard.
+
+Phase 3: Financial assistance
+
+- Financial assistance application.
+- Eligibility review.
+- Approval workflow.
+- Configurable flexible reimbursement schedule.
+- Payment ledger.
+- Reconciliation.
+- Financial dashboard.
+
+Phase 4: Community operations
+
+- POS and assistant registration.
+- Assistant verification.
+- Assisted registration workflow.
+- Configurable ₦2,000 incentive.
+- Incentive approval and tracking.
+
+Phase 5: Advanced capabilities
+
+- Authorised agency APIs.
+- Additional state scheme integrations.
+- Automated agency status updates.
+- AI insurance assistant.
+- Advanced impact reporting.
+
+Prioritise a reliable, accessible registration experience over adding numerous unfinished features.
+
+---
+
+17. TESTING REQUIREMENTS
+
+Test the complete user journey.
+
+Participant tests
+
+- Register in English.
+- Register in Yoruba.
+- Register in Hausa.
+- Register in Igbo.
+- Register without an email address.
+- Request registration assistance.
+- Request financial assistance.
+- View registration status.
+- Receive a valid confirmation message when notification providers are configured.
+
+Administrative tests
+
+- Review a registration.
+- Approve or decline financial assistance.
+- Record a payment to a scheme.
+- Update enrolment status.
+- Record a reimbursement.
+- Reconcile financial transactions.
+- Approve an assistant.
+- Approve a POS incentive.
+- View aggregate reports.
+
+Security tests
+
+- Verify role permissions.
+- Prevent unauthorised access to participant records.
+- Prevent duplicate financial transactions.
+- Validate inputs on the server.
+- Prevent unauthorised status changes.
+- Ensure a failed notification does not falsely show as delivered.
+
+Test cases should include participants with irregular income, limited digital literacy, and different language preferences.
+
+---
+
+18. FINAL DEVELOPMENT INSTRUCTIONS
+
+Start by inspecting the existing project and establishing the implementation plan.
+
+Then build the application, beginning with the core registration experience.
+
+Do not stop after creating the homepage.
+
+Implement working forms, database persistence, validation, language switching, registration references, administrative workflows, and notification integrations.
+
+Where an external API or account is required, provide a clear configuration path and a safe fallback.
+
+Use demonstration data only when clearly labelled.
+
+Never fabricate:
+
+- Agency partnerships.
+- Successful enrolments.
+- Active insurance coverage.
+- SMS or email delivery.
+- Reimbursement approvals.
+- Financial transactions.
+- Government integrations.
+
+The final application must help an informal worker understand health insurance, register for assistance, navigate an official enrolment pathway, and follow the progress of their case.
+
+Build WeNaijaHealth as an accessible bridge between Nigeria's informal workers and legitimate health insurance—not merely as a website that collects names.
