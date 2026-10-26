@@ -16,9 +16,18 @@ interface Scheme {
   cost: string;
   costDetail: string;
   eligibility: string[];
+  plans?: Array<{
+    name: string;
+    contribution: string;
+    description: string;
+  }>;
   benefits: string[];
+  exclusions?: string[];
+  coverageNote?: string;
   facilities: string;
   registrationSteps: string[];
+  contact?: string[];
+  officialUrl?: string;
   subsidyAvailable: boolean;
   tag: string;
 }
@@ -26,35 +35,62 @@ interface Scheme {
 const SCHEMES: Scheme[] = [
   {
     id: 'kwaracare',
-    name: 'KwaraCARE Health Plan',
+    name: 'KwaraCare',
     provider: 'Kwara State Health Insurance Agency',
     state: 'Kwara',
     verified: true,
-    cost: '₦1,500/month (Individual)',
-    costDetail: 'Individual: ₦1,500/month • Family: ₦5,000/month (up to 6 members)',
+    cost: 'From ₦15,500 per year',
+    costDetail: 'Premiums are paid annually. Family cover includes the principal enrollee, spouse and up to 4 children under 18.',
     eligibility: [
       'Resident of Kwara State',
-      'Self-employed or informal worker',
-      'Age 0–65 years (special provisions for elderly)',
-      'No pre-existing condition exclusion after 6 months',
+      'Informal plan: self-employed people, artisans, farmers and small businesses',
+      'Formal plan: civil servants, local government employees and eligible private-sector employees',
+      'Equity plan: eligible low-income and vulnerable residents',
+    ],
+    plans: [
+      {
+        name: 'Informal Health Plan',
+        contribution: '₦15,500 per person annually',
+        description: 'For self-employed people, artisans, farmers and other informal-sector residents. Family option: ₦75,000 for up to 6 members.',
+      },
+      {
+        name: 'Formal Health Plan',
+        contribution: '₦18,000 per person annually',
+        description: 'For civil servants, local government employees and eligible private-sector employees. Family option: ₦87,000 for up to 6 members.',
+      },
+      {
+        name: 'Equity Health Plan',
+        contribution: 'Subsidised, subject to eligibility',
+        description: 'For eligible low-income households and vulnerable residents under the scheme rules.',
+      },
     ],
     benefits: [
-      'Primary healthcare consultations',
-      'Essential drugs and medications',
-      'Antenatal and postnatal care',
-      'Child immunisations',
-      'Emergency care and stabilisation',
-      'Basic laboratory investigations',
-      'Referral services',
+      'General and specialist consultations',
+      'Selected tests, plain X-rays and approved medicines',
+      'Treatment for common illnesses, hypertension and type 2 diabetes',
+      'Minor and intermediate surgery, including hernia repair and appendectomy',
+      'Emergency, maternal, child and selected eye-care services',
+      'Hospital admission for up to 5 nights; longer stays need authorisation',
     ],
-    facilities: '47 accredited Primary Health Centres and Hospitals across 16 LGAs in Kwara State',
+    exclusions: [
+      'Brain surgery, kidney transplant and cancer treatment',
+      'IVF, hormone replacement therapy and prostheses',
+      'Congenital abnormalities, self-inflicted injuries and drug-addiction treatment',
+    ],
+    coverageNote: 'Coverage depends on the applicable benefit package. Confirm current limits for procedures, tests and medicines before enrolling.',
+    facilities: 'Choose one empanelled public or private provider for routine care. Emergency care is available at the nearest contracted provider, subject to scheme rules.',
     registrationSteps: [
-      'Visit a KwaraCARE enrollment centre or call the helpline',
-      'Provide valid ID (NIN, Voter\'s Card, or State Resident ID)',
-      'Complete enrollment form and biometric capture',
-      'Make first premium payment',
-      'Receive your KwaraCARE member card within 7 working days',
+      'Review the current package and confirm that your preferred hospital is empanelled',
+      'Confirm any expected treatment, referral requirement, waiting period or co-payment with KWHIA',
+      'Contact KwaraCare or visit the official package page to enrol',
     ],
+    contact: [
+      'Toll-free: 0800 100 1001',
+      'WhatsApp: +234 916 998 9038',
+      'Email: healthinsurance@kwarastate.gov.ng',
+      'House 27B, Ahmadu Bello Way, G.R.A., Ilorin, Kwara State',
+    ],
+    officialUrl: 'https://kwaracare.com.ng/packages/',
     subsidyAvailable: true,
     tag: 'State SHIS',
   },
@@ -190,19 +226,54 @@ export default function SchemesPage() {
                       </ul>
                     </div>
 
+                    {scheme.plans && (
+                      <div className="detail-section">
+                        <h3 className="detail-title">📋 Available plans</h3>
+                        <div className="plan-list">
+                          {scheme.plans.map((plan) => (
+                            <div className="plan-item" key={plan.name}>
+                              <strong>{plan.name}</strong>
+                              <span>{plan.contribution}</span>
+                              <p>{plan.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Benefits */}
                     <div className="detail-section">
                       <h3 className="detail-title">✅ {dict.schemeBenefits}</h3>
                       <ul className="detail-list">
                         {scheme.benefits.map((item, j) => <li key={j}>{item}</li>)}
                       </ul>
+                      {scheme.coverageNote && <p className="coverage-note">{scheme.coverageNote}</p>}
                     </div>
+
+                    {scheme.exclusions && (
+                      <div className="detail-section">
+                        <h3 className="detail-title">⚠️ Important exclusions</h3>
+                        <ul className="detail-list">
+                          {scheme.exclusions.map((item, j) => <li key={j}>{item}</li>)}
+                        </ul>
+                        <p className="coverage-note">These exclusions are from the published benefit document. Confirm the latest approved schedule before enrolling.</p>
+                      </div>
+                    )}
 
                     {/* Facilities */}
                     <div className="detail-section">
                       <h3 className="detail-title">🏥 {dict.schemeFacilities}</h3>
                       <p className="detail-text">{scheme.facilities}</p>
                     </div>
+
+                    {scheme.contact && (
+                      <div className="detail-section">
+                        <h3 className="detail-title">☎️ Contact KwaraCare</h3>
+                        <ul className="detail-list">
+                          {scheme.contact.map((item, j) => <li key={j}>{item}</li>)}
+                        </ul>
+                      </div>
+                    )}
 
                     {/* Registration Steps */}
                     <div className="detail-section">
@@ -218,9 +289,21 @@ export default function SchemesPage() {
 
                 {/* CTA */}
                 <div className="scheme-cta">
-                  <Link href="/register" className="btn-primary" id={`scheme-register-${scheme.id}`}>
-                    {dict.btnGetStarted} →
-                  </Link>
+                  {scheme.officialUrl ? (
+                    <a
+                      href={scheme.officialUrl}
+                      className="btn-primary"
+                      id={`scheme-register-${scheme.id}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View official package details ↗
+                    </a>
+                  ) : (
+                    <Link href="/register" className="btn-primary" id={`scheme-register-${scheme.id}`}>
+                      {dict.btnGetStarted} →
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
@@ -283,6 +366,13 @@ export default function SchemesPage() {
         .detail-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text); }
         .detail-list { padding-left: 1.25rem; list-style-type: disc; }
         .detail-list li { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 0.25rem; }
+        .plan-list { display: grid; gap: 0.75rem; }
+        .plan-item { padding: 0.875rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+        .plan-item strong, .plan-item span { display: block; }
+        .plan-item strong { color: var(--color-text); font-size: 0.9rem; }
+        .plan-item span { color: var(--color-primary); font-weight: 700; font-size: 0.85rem; margin-top: 0.125rem; }
+        .plan-item p, .coverage-note { color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.55; margin: 0.4rem 0 0; }
+        .coverage-note { margin-top: 0.75rem; }
         .detail-steps { padding-left: 1.25rem; }
         .detail-steps li { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 0.5rem; }
         .detail-text { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
