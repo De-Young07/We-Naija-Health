@@ -22,6 +22,11 @@ export const metadata: Metadata = {
       "Helping informal workers discover, understand, and access health insurance in Nigeria.",
     type: "website",
     locale: "en_NG",
+    images: [{ url: "/wenaijahealth-logo.jpeg", width: 1280, height: 440, alt: "WeNaijaHealth" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/wenaijahealth-logo.jpeg"],
   },
 };
 
@@ -30,7 +35,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className="h-full antialiased">
       <head>
         <meta name="theme-color" content="#008751" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Load Inter font via Google Fonts CDN — gracefully degrades to system fonts if offline */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

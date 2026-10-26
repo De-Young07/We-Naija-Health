@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLocale } from '@/lib/locale-context';
 import { LOCALE_LIST } from '@/lib/i18n';
 import { LanguageModal } from './language-modal';
@@ -19,8 +20,14 @@ export function Navbar() {
         <div className="container-wn navbar-inner">
           {/* Logo */}
           <Link href="/" className="navbar-logo" id="nav-logo">
-            <span className="logo-icon">💚</span>
-            <span className="logo-text">{dict.siteName}</span>
+            <Image
+              src="/wenaijahealth-logo.jpeg"
+              alt={dict.siteName}
+              width={184}
+              height={61}
+              priority
+              className="logo-image"
+            />
           </Link>
 
           {/* Desktop Links */}
@@ -82,42 +89,33 @@ export function Navbar() {
           position: sticky;
           top: 0;
           z-index: 100;
-          background: rgba(255, 255, 255, 0.92);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          background: rgba(255, 255, 255, 0.97);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           border-bottom: 1px solid var(--color-border);
         }
         .navbar-inner {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          height: 4rem;
+          height: 4.75rem;
         }
         .navbar-logo {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
           text-decoration: none;
-          font-weight: 800;
-          font-size: 1.25rem;
-          color: var(--color-primary);
-        }
-        .logo-icon {
-          font-size: 1.5rem;
-        }
-        .logo-text {
-          letter-spacing: -0.02em;
+          line-height: 0;
         }
         .navbar-links {
           display: flex;
-          gap: 2rem;
+          gap: 1.75rem;
         }
         .nav-link {
           font-size: 0.9rem;
-          font-weight: 500;
+          font-weight: 600;
           color: var(--color-text-muted);
           text-decoration: none;
-          transition: color var(--transition-fast);
+          transition: color var(--transition-fast), opacity var(--transition-fast);
           position: relative;
         }
         .nav-link:hover {
@@ -130,13 +128,13 @@ export function Navbar() {
         }
         .lang-toggle {
           padding: 0.4rem 0.75rem;
-          border-radius: var(--radius-full);
-          border: 1.5px solid var(--color-border);
-          background: transparent;
+          border-radius: var(--radius-md);
+          border: 1px solid var(--color-border);
+          background: var(--color-surface);
           font-size: 0.8rem;
           font-weight: 500;
           cursor: pointer;
-          transition: all var(--transition-fast);
+          transition: border-color var(--transition-fast), background-color var(--transition-fast);
           color: var(--color-text);
         }
         .lang-toggle:hover {
@@ -165,7 +163,7 @@ export function Navbar() {
           height: 2px;
           background: var(--color-text);
           border-radius: 1px;
-          transition: all var(--transition-fast);
+          transition: transform var(--transition-fast), opacity var(--transition-fast);
         }
         .hamburger.open span:nth-child(1) {
           transform: rotate(45deg) translate(4px, 4px);
@@ -203,8 +201,10 @@ export function Navbar() {
 
         @media (max-width: 768px) {
           .navbar-links,
-          .navbar-cta,
           .lang-toggle {
+            display: none;
+          }
+          .navbar-actions .navbar-cta {
             display: none;
           }
           .mobile-menu-btn {

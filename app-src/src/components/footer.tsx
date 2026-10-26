@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLocale } from '@/lib/locale-context';
 
 export function Footer() {
@@ -16,7 +17,13 @@ export function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <span className="footer-logo">💚 {dict.siteName}</span>
+            <Image
+              src="/wenaijahealth-logo.jpeg"
+              alt={dict.siteName}
+              width={300}
+              height={94}
+              className="footer-logo"
+            />
             <p className="footer-tagline">{dict.tagline}</p>
           </div>
 
@@ -53,7 +60,7 @@ export function Footer() {
           margin-top: auto;
         }
         .footer-disclaimer {
-          background: var(--wn-green-800);
+          background: #063d2d;
           padding: 1rem 1.5rem;
           margin: 0 calc(-1 * var(--space-lg));
           margin-bottom: 2rem;
@@ -71,14 +78,14 @@ export function Footer() {
           display: grid;
           grid-template-columns: 2fr 1fr 1fr;
           gap: 3rem;
-          padding-bottom: 2rem;
+          padding: 0.75rem 0 2.5rem;
         }
         .footer-logo {
-          font-size: 1.25rem;
-          font-weight: 800;
           display: block;
-          margin-bottom: 0.5rem;
-          color: white;
+          width: min(15rem, 100%);
+          height: auto;
+          margin-bottom: 0.75rem;
+          border-radius: var(--radius-sm);
         }
         .footer-tagline {
           font-size: 0.9rem;

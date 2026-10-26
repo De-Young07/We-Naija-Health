@@ -144,12 +144,12 @@ export default function AboutPage() {
       <style jsx>{`
         .about-main { flex: 1; }
         .about-hero {
-          background: var(--gradient-hero); color: white;
+          background: var(--wn-green-800); color: white;
           padding: 4rem 0; text-align: center; position: relative;
         }
         .about-hero::after {
           content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
-          background: var(--gradient-gold);
+          background: var(--wn-gold-400);
         }
         .about-headline { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 1rem; }
         .about-subtext { font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.7; opacity: 0.92; }

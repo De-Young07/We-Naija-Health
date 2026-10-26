@@ -157,7 +157,7 @@ export default function HomePage() {
         .hero-btn {
           padding: 1rem 2.25rem;
           font-size: 1.1rem;
-          border-radius: var(--radius-xl);
+          border-radius: var(--radius-md);
         }
         .hero-btn-secondary {
           background: rgba(255,255,255,0.15);
@@ -165,7 +165,7 @@ export default function HomePage() {
           color: white;
           padding: 1rem 2.25rem;
           font-size: 1.1rem;
-          border-radius: var(--radius-xl);
+          border-radius: var(--radius-md);
         }
         .hero-btn-secondary:hover {
           background: rgba(255,255,255,0.25);
@@ -240,7 +240,7 @@ export default function HomePage() {
           border-radius: var(--radius-full);
           border: 1px solid var(--color-border);
           box-shadow: var(--shadow-sm);
-          transition: all var(--transition-fast);
+          transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
         }
         .worker-chip:hover {
           box-shadow: var(--shadow-md);
@@ -281,7 +281,7 @@ export default function HomePage() {
 
         /* CTA Banner */
         .cta-banner {
-          background: var(--gradient-hero);
+          background: var(--wn-green-800);
           padding: 4rem 0;
         }
         .cta-inner {
