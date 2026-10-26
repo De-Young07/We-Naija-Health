@@ -120,13 +120,13 @@ export default function AboutPage() {
               <div className="card contact-card">
                 <div className="contact-icon">📞</div>
                 <h3>Phone / WhatsApp</h3>
-                <p className="contact-detail">+234 XXX XXX XXXX</p>
+                <a href="tel:+2348179969112" className="contact-detail">+234 817 996 9112</a>
                 <p className="contact-note">Mon–Sat, 8am–6pm</p>
               </div>
               <div className="card contact-card">
                 <div className="contact-icon">📧</div>
                 <h3>Email</h3>
-                <p className="contact-detail">support@wenaijahealth.org</p>
+                <a href="mailto:Team.wenaijahealth@gmail.com" className="contact-detail">Team.wenaijahealth@gmail.com</a>
                 <p className="contact-note">We respond within 24 hours</p>
               </div>
               <div className="card contact-card">
@@ -180,7 +180,8 @@ export default function AboutPage() {
         .contact-card { text-align: center; }
         .contact-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
         .contact-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .contact-detail { font-size: 1rem; font-weight: 600; color: var(--color-primary); margin-bottom: 0.25rem; }
+        .contact-detail { display: block; font-size: 1rem; font-weight: 600; color: var(--color-primary); margin-bottom: 0.25rem; text-decoration: none; transition: opacity 0.2s; }
+        .contact-detail:hover { opacity: 0.75; text-decoration: underline; }
         .contact-note { font-size: 0.8rem; color: var(--color-text-muted); }
 
         @media (max-width: 768px) {
