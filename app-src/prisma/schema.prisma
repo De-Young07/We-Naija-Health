@@ -1,0 +1,276 @@
+// Prisma Schema — WeNaijaHealth
+// PostgreSQL on Supabase
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ━━━ Enums ━━━
+
+enum UserRole {
+  ADMIN
+  AGENT
+  READONLY
+}
+
+enum RegistrationStatus {
+  NEW
+  CONTACTED
+  IN_PROGRESS
+  DOCUMENTS_READY
+  ENROLLMENT_SCHEDULED
+  ENROLLED
+  DROPPED
+  INVALID
+}
+
+enum WorkerType {
+  MARKET_TRADER
+  SHOP_OWNER
+  PETTY_TRADER
+  ARTISAN
+  FARMER
+  FOOD_SELLER
+  TRANSPORT
+  SELF_EMPLOYED
+  OTHER
+}
+
+enum InsuranceStatus {
+  YES
+  NO
+  NOT_SURE
+}
+
+enum CoverageType {
+  SELF
+  FAMILY
+}
+
+enum RegistrationSource {
+  WEB
+  FIELD_AGENT
+  PHONE
+  WHATSAPP
+}
+
+enum FollowUpType {
+  PHONE_CALL
+  WHATSAPP
+  EMAIL
+  IN_PERSON
+  SMS
+  INTERNAL_NOTE
+}
+
+enum FollowUpOutcome {
+  REACHED
+  NOT_REACHED
+  CALLBACK_REQUESTED
+  DOCUMENTS_SHARED
+  ENROLLMENT_SCHEDULED
+  ENROLLED
+  DROPPED
+}
+
+enum InquiryType {
+  GENERAL
+  REGISTRATION_HELP
+  SCHEME_QUESTION
+  COMPLAINT
+  PARTNERSHIP
+}
+
+enum InquiryStatus {
+  NEW
+  RESPONDED
+  RESOLVED
+  ARCHIVED
+}
+
+enum SchemeTag {
+  FEDERAL
+  STATE_SHIS
+  PRIVATE
+}
+
+// ━━━ Models ━━━
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String
+  passwordHash   String
+  role           UserRole  @default(AGENT)
+  active         Boolean   @default(true)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  followUps      FollowUp[]
+  assignedInquiries Inquiry[]
+  registrationsAsAgent Registration[] @relation("FieldAgent")
+
+  @@map("users")
+}
+
+model Registration {
+  id                String             @id @default(cuid())
+  referenceNumber   String             @unique
+  
+  // Personal info
+  fullName          String
+  phone             String
+  email             String?
+  state             String
+  lga               String?
+  community         String?
+  preferredContact  String             @default("sms")
+  
+  // Work info
+  workerType        WorkerType
+  workerTypeOther   String?
+  
+  // Insurance info
+  currentInsurance  InsuranceStatus
+  coveragePreference CoverageType
+  
+  // Scheme preference
+  preferredSchemeId String?
+  preferredScheme   Scheme?            @relation(fields: [preferredSchemeId], references: [id])
+  
+  // Consent
+  consentDataUsage  Boolean
+  consentSharing    Boolean
+  consentReimbursement Boolean
+  consentComms      Boolean
+  
+  // Metadata
+  locale            String             @default("en")
+  source            RegistrationSource @default(WEB)
+  fieldAgentId      String?
+  fieldAgent        User?              @relation("FieldAgent", fields: [fieldAgentId], references: [id])
+  
+  // Status & tracking
+  status            RegistrationStatus @default(NEW)
+  notes             String?
+  assignedTo        String?
+  
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  followUps         FollowUp[]
+
+  @@index([status])
+  @@index([state])
+  @@index([createdAt])
+  @@map("registrations")
+}
+
+model FollowUp {
+  id              String          @id @default(cuid())
+  
+  registrationId  String
+  registration    Registration    @relation(fields: [registrationId], references: [id], onDelete: Cascade)
+  
+  userId          String
+  user            User            @relation(fields: [userId], references: [id])
+  
+  type            FollowUpType
+  outcome         FollowUpOutcome
+  notes           String
+  nextActionDate  DateTime?
+  
+  createdAt       DateTime        @default(now())
+
+  @@index([registrationId])
+  @@map("follow_ups")
+}
+
+model Scheme {
+  id                String    @id @default(cuid())
+  name              String
+  provider          String
+  state             String
+  tag               SchemeTag
+  verified          Boolean   @default(false)
+  lastVerifiedAt    DateTime?
+  
+  cost              String
+  costDetail        String
+  eligibility       Json      // string[]
+  benefits          Json      // string[]
+  exclusions        Json?     // string[]
+  facilities        String
+  registrationSteps Json      // string[]
+  
+  contactPhone      String?
+  contactEmail      String?
+  contactAddress    String?
+  officialUrl       String?
+  
+  subsidyAvailable  Boolean   @default(false)
+  active            Boolean   @default(true)
+  
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  registrations     Registration[]
+
+  @@map("schemes")
+}
+
+model Inquiry {
+  id          String        @id @default(cuid())
+  name        String
+  phone       String
+  email       String?
+  message     String
+  type        InquiryType   @default(GENERAL)
+  status      InquiryStatus @default(NEW)
+  locale      String        @default("en")
+  
+  assignedToId String?
+  assignedTo   User?        @relation(fields: [assignedToId], references: [id])
+  
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([status])
+  @@map("inquiries")
+}
+
+model NotificationLog {
+  id          String   @id @default(cuid())
+  channel     String   // email, whatsapp, telegram
+  recipient   String
+  eventType   String   // new_registration, status_change, new_inquiry, follow_up_overdue
+  payload     Json
+  success     Boolean
+  errorMessage String?
+  createdAt   DateTime @default(now())
+
+  @@index([eventType])
+  @@map("notification_logs")
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  userId      String?
+  action      String   // registration.create, follow_up.create, scheme.update, etc.
+  entityType  String
+  entityId    String
+  details     Json?
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+

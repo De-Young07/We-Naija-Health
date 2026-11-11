@@ -135,20 +135,69 @@ export default function RegisterPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleSubmit = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const handleSubmit = async () => {
     if (!validateStep(step)) return;
+    setSubmitting(true);
+    setSubmitError('');
 
-    // Generate reference number
-    const ref = `WNH-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
-    setRefNumber(ref);
-    setSubmitted(true);
+    try {
+      // Map frontend form values to API schema
+      const workerTypeMap: Record<string, string> = {
+        market_trader: 'MARKET_TRADER', shop_owner: 'SHOP_OWNER',
+        petty_trader: 'PETTY_TRADER', artisan: 'ARTISAN', farmer: 'FARMER',
+        food_seller: 'FOOD_SELLER', transport: 'TRANSPORT',
+        self_employed: 'SELF_EMPLOYED', other: 'OTHER',
+      };
+      const insuranceMap: Record<string, string> = {
+        yes: 'YES', no: 'NO', not_sure: 'NOT_SURE',
+      };
+      const coverageMap: Record<string, string> = {
+        self: 'SELF', family: 'FAMILY',
+      };
 
-    // Clear draft
-    localStorage.removeItem('wenaija-draft');
+      const payload = {
+        fullName: data.fullName.trim(),
+        phone: data.phone.replace(/\s/g, ''),
+        email: data.email || '',
+        state: data.state,
+        lga: data.lga,
+        community: data.community,
+        preferredContact: data.preferredContact || 'sms',
+        workerType: workerTypeMap[data.workType] || 'OTHER',
+        currentInsurance: insuranceMap[data.hasInsurance] || 'NOT_SURE',
+        coveragePreference: coverageMap[data.coverageFor] || 'SELF',
+        consentDataUsage: data.consentData,
+        consentSharing: data.consentSharing,
+        consentReimbursement: data.consentReimbursement,
+        consentComms: data.consentComms,
+        locale: 'en',
+        source: 'WEB',
+      };
 
-    // In production: POST to /api/register
-    console.log('Registration submitted:', { ...data, ref });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+      const res = await fetch('/api/registrations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.error || 'Registration failed');
+      }
+
+      setRefNumber(result.referenceNumber);
+      setSubmitted(true);
+      localStorage.removeItem('wenaija-draft');
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   // ━━━ Confirmation Screen ━━━
@@ -457,13 +506,18 @@ export default function RegisterPage() {
                     type="button"
                     className="btn-primary submit-btn"
                     onClick={handleSubmit}
-                    disabled={!data.consentData}
+                    disabled={!data.consentData || submitting}
                     id="btn-submit"
                   >
-                    {dict.btnSubmit} ✓
+                    {submitting ? '⏳ Submitting...' : `${dict.btnSubmit} ✓`}
                   </button>
                 )}
               </div>
+              {submitError && (
+                <div className="submit-error" id="submit-error">
+                  <p>❌ {submitError}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
