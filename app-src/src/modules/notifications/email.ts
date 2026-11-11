@@ -17,6 +17,11 @@ export function teamNotificationEmail(): string {
   return process.env.TEAM_NOTIFICATION_EMAIL || 'team.accesscare@gmail.com';
 }
 
+export function fromEmail(): string {
+  // Use verified custom domain if provided, otherwise fallback to Resend's default onboarding address
+  return process.env.RESEND_FROM_EMAIL || 'WeNaijaHealth <onboarding@resend.dev>';
+}
+
 interface SendEmailParams {
   to: string | string[];
   subject: string;
@@ -28,7 +33,7 @@ export async function sendEmail(params: SendEmailParams) {
   const resend = getResend();
 
   const { data, error } = await resend.emails.send({
-    from: 'WeNaijaHealth <notifications@resend.dev>', // Use your verified domain in production
+    from: fromEmail(),
     to: Array.isArray(params.to) ? params.to : [params.to],
     subject: params.subject,
     html: params.html,
@@ -36,10 +41,9 @@ export async function sendEmail(params: SendEmailParams) {
   });
 
   if (error) {
-    console.error('[Email] Send failed:', error);
+    console.error('[Email] Resend API Error:', error);
     throw new Error(`Email send failed: ${error.message}`);
   }
 
   return data;
 }
-

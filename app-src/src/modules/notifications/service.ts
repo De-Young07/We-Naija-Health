@@ -1,6 +1,7 @@
-// Notification service — dispatches team alerts via email
+// Notification service — dispatches team alerts via email and WhatsApp
 
 import { sendEmail, teamNotificationEmail } from './email';
+import { sendWhatsAppTextMessage } from './whatsapp';
 import prisma from '@/lib/db';
 
 export interface NotificationEvent {
@@ -37,12 +38,12 @@ const WORKER_TYPE_LABELS: Record<string, string> = {
 };
 
 /**
- * Notify team about an event via all configured channels
+ * Notify team and participant about an event via all configured channels
  */
 export async function notifyTeam(event: NotificationEvent) {
   const results: Array<{ channel: string; success: boolean; error?: string }> = [];
 
-  // Channel 1: Email via Resend
+  // ━━━ Channel 1: Email via Resend ━━━
   try {
     if (event.type === 'new_registration' && event.registration) {
       const reg = event.registration;
@@ -67,7 +68,42 @@ export async function notifyTeam(event: NotificationEvent) {
     console.error('[Notification] Email failed:', errMsg);
   }
 
-  // Log all notification attempts
+  // ━━━ Channel 2: WhatsApp Cloud API ━━━
+  try {
+    if (event.type === 'new_registration' && event.registration) {
+      const reg = event.registration;
+
+      // 1. Send instant WhatsApp confirmation to participant
+      const greetingMsg = reg.locale === 'pcm'
+        ? `Kóóyo ${reg.fullName}! Thank you as you register for WeNaijaHealth.\nYour registration code na: *${reg.referenceNumber}*.\nOur care officer go call you within 24 hours make we guide you to get KwaraCare / NHIA card near ${reg.lga || reg.state}.\nReply this message if you get any urgent question!`
+        : `Hello ${reg.fullName}, thank you for registering on WeNaijaHealth!\nYour registration code is: *${reg.referenceNumber}*.\nA care officer will call you within 24 hours to guide you to the nearest accredited clinic (KwaraCare / NHIA) near ${reg.lga || reg.state}.\nFeel free to reply directly to this WhatsApp message!`;
+
+      const waRes = await sendWhatsAppTextMessage({
+        to: reg.phone,
+        message: greetingMsg,
+      });
+
+      if (waRes.success) {
+        results.push({ channel: 'whatsapp_participant', success: true });
+      }
+
+      // 2. If team WhatsApp lead is set in environment, notify team lead
+      const teamWhatsApp = process.env.TEAM_WHATSAPP_PHONE;
+      if (teamWhatsApp) {
+        await sendWhatsAppTextMessage({
+          to: teamWhatsApp,
+          message: `🚨 *New Participant Registered!*\nName: ${reg.fullName}\nPhone: ${reg.phone}\nRef: ${reg.referenceNumber}\nLocation: ${reg.state} (${reg.lga})\nTrade: ${reg.workerType}\nCoverage: ${reg.coveragePreference}`,
+        });
+        results.push({ channel: 'whatsapp_team', success: true });
+      }
+    }
+  } catch (waErr) {
+    const errMsg = waErr instanceof Error ? waErr.message : 'Unknown WhatsApp error';
+    results.push({ channel: 'whatsapp', success: false, error: errMsg });
+    console.error('[Notification] WhatsApp outbound failed:', errMsg);
+  }
+
+  // Log all notification attempts to database audit
   for (const result of results) {
     await prisma.notificationLog.create({
       data: {
@@ -78,7 +114,7 @@ export async function notifyTeam(event: NotificationEvent) {
         success: result.success,
         errorMessage: result.error || null,
       },
-    }).catch(() => {}); // Never let logging block the flow
+    }).catch(() => {});
   }
 
   return results;
@@ -164,4 +200,3 @@ function buildInquiryEmailHtml(inq: NonNullable<NotificationEvent['inquiry']>): 
 </body>
 </html>`;
 }
-
