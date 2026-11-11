@@ -186,7 +186,13 @@ export default function RegisterPage() {
       const result = await res.json();
 
       if (!res.ok) {
-        throw new Error(result.error || 'Registration failed');
+        let errorMsg = result.error || 'Registration failed';
+        if (result.details && typeof result.details === 'object') {
+          const firstField = Object.keys(result.details)[0];
+          const firstErr = result.details[firstField]?.[0];
+          if (firstErr) errorMsg = `${firstField}: ${firstErr}`;
+        }
+        throw new Error(errorMsg);
       }
 
       setRefNumber(result.referenceNumber);
