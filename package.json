@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "WeNaijaHealth root proxy for Railway and cloud deployments",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "postinstall": "cd app-src && npm install",
     "build": "cd app-src && npm run build",
