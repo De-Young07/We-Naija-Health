@@ -2,7 +2,7 @@
 ## YC Office Hours · Designer's Eye Review · Eng Manager Architecture Review
 
 **Target:** Pilot Operation (Tomorrow Morning)  
-**Product:** WeNaijaHealth (`wenaijahealth.com.ng`)  
+**Product:** HealthSure Connect (`healthsureconnect.com.ng`)  
 **Scope:** Pilot Readiness, User Experience, Technical Architecture, Field Viability
 
 ---
@@ -20,7 +20,7 @@
   2. 5-Step Assisted or Self-Serve Registration (Name, Language, Phone, Trade, Scheme Interest).
   3. Real verified Scheme Directory (KwaraCare / NHIA GIFSHIP) showing actual benefits and realistic costs.
   4. Honest Financial Assistance Application (collecting repayment preferences without making false promises of instant free money).
-  5. Instant Reference Slip (`WNH-2026-XXXXXX`) that can be saved, screenshotted, or shared via WhatsApp.
+  5. Instant Reference Slip (`HSC-2026-XXXXXX`) that can be saved, screenshotted, or shared via WhatsApp.
   6. Functional Admin Dashboard for the team to view, filter, verify, and export the registrations.
 
 #### Q2: What status quo are we actually replacing?
@@ -34,7 +34,7 @@
   - *"Your health insurance is now active!"* upon submitting our form.
   - *"We guarantee 100% free healthcare."*
 - **How We Win Trust:** Be aggressively honest.
-  - State clearly: *"WeNaijaHealth is an independent access platform that guides you to official government and state schemes and helps arrange flexible support. Your official coverage is activated by the scheme authority upon verification."*
+  - State clearly: *"HealthSure Connect is an independent access platform that guides you to official government and state schemes and helps arrange flexible support. Your official coverage is activated by the scheme authority upon verification."*
   - This level of transparency makes government partners, donors, and informal workers trust the platform instantly.
 
 ---
@@ -88,7 +88,7 @@
 
 ```
 +-----------------------------------------------------------------------------------+
-|                              WeNaijaHealth Platform                               |
+|                              HealthSure Connect Platform                               |
 +-----------------------------------------------------------------------------------+
 |                                                                                   |
 |  +--------------------+     +---------------------+     +----------------------+  |

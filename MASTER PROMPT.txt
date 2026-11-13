@@ -1,17 +1,17 @@
-MASTER PROMPT: BUILD WeNaijaHealth
+MASTER PROMPT: BUILD HealthSure Connect
 
 1. ROLE AND MISSION
 
 Act as a senior full-stack engineer, health-tech product architect, UI/UX designer, database engineer, and Nigerian health insurance systems specialist.
 
-Build a functional, mobile-first web application called WeNaijaHealth.
+Build a functional, mobile-first web application called HealthSure Connect.
 
-Official name: WeNaijaHealth
-Domain: wenaijahealth.com.ng
+Official name: HealthSure Connect
+Domain: healthsureconnect.com.ng
 Campaign: Protect What Matters
 Tagline: Your Work Shouldn't Cost You Your Health.
 
-WeNaijaHealth is a digital health insurance access and enrolment-support platform designed for Nigeria's informal workforce, including market women, traders, artisans, petty traders, self-employed individuals, and other social and informal workers.
+HealthSure Connect is a digital health insurance access and enrolment-support platform designed for Nigeria's informal workforce, including market women, traders, artisans, petty traders, self-employed individuals, and other social and informal workers.
 
 The platform should make health insurance easier to understand, easier to register for, and more accessible to people who face financial, literacy, language, and digital barriers.
 
@@ -68,7 +68,7 @@ Recommended visual direction
 - Components: rounded cards, large buttons, clear forms, simple icons.
 - Imagery: authentic Nigerian market workers, artisans, families, and community healthcare settings.
 
-Create a simple WeNaijaHealth logo concept combining healthcare, protection, and community.
+Create a simple HealthSure Connect logo concept combining healthcare, protection, and community.
 
 The website must look professional enough for government agencies, donors, healthcare institutions, and potential partners while remaining approachable for informal workers.
 
@@ -149,7 +149,7 @@ Your Work Shouldn't Cost You Your Health.
 
 Supporting text:
 
-"Whether you sell in a market, run a small business, or work for yourself, understanding health insurance should not be difficult. WeNaijaHealth helps you explore your options, find official registration pathways, and get support through the process."
+"Whether you sell in a market, run a small business, or work for yourself, understanding health insurance should not be difficult. HealthSure Connect helps you explore your options, find official registration pathways, and get support through the process."
 
 Primary button:
 
@@ -182,7 +182,7 @@ Follow the appropriate official registration process and find out whether you qu
 Additional sections
 
 - Who We Help.
-- How WeNaijaHealth Works.
+- How HealthSure Connect Works.
 - Understand Health Insurance.
 - Explore Available Schemes.
 - Flexible Payment and Reimbursement Support.
@@ -289,7 +289,7 @@ Explain in the user's selected language:
 
 Provide separate consent options where appropriate for:
 
-1. Creating a WeNaijaHealth account or registration record.
+1. Creating a HealthSure Connect account or registration record.
 2. Sharing relevant information with an identified insurance scheme.
 3. Requesting reimbursement or financial assistance.
 4. Receiving SMS and email communications.
@@ -298,29 +298,29 @@ Do not use one vague consent checkbox to authorise every purpose.
 
 Let the user review their information before submission.
 
-After submission, generate a unique WeNaijaHealth reference number.
+After submission, generate a unique HealthSure Connect reference number.
 
 Example:
 
-Your reference number: WNH-2026-000123
+Your reference number: HSC-2026-000123
 
 Use a unique, securely generated reference in the real implementation rather than hard-coding this example.
 
 Display:
 
-"Thank you for registering with WeNaijaHealth. We will help you understand the next steps. Your insurance enrolment and coverage must still be confirmed by the relevant authorised scheme."
+"Thank you for registering with HealthSure Connect. We will help you understand the next steps. Your insurance enrolment and coverage must still be confirmed by the relevant authorised scheme."
 
 ---
 
 7. FLEXIBLE REIMBURSEMENT AND FINANCIAL ASSISTANCE
 
-Build a dedicated module for WeNaijaHealth's proposed flexible reimbursement model.
+Build a dedicated module for HealthSure Connect's proposed flexible reimbursement model.
 
 Our intended approach
 
 We want to help eligible informal workers overcome the financial barrier to accessing health insurance.
 
-Depending on the participant's eligibility, the available funding, and the agreement with the relevant scheme, WeNaijaHealth may support payment of an approved insurance contribution and allow the participant to reimburse WeNaijaHealth flexibly.
+Depending on the participant's eligibility, the available funding, and the agreement with the relevant scheme, HealthSure Connect may support payment of an approved insurance contribution and allow the participant to reimburse HealthSure Connect flexibly.
 
 The purpose is to reduce the need for a participant to provide the entire contribution upfront.
 
@@ -422,7 +422,7 @@ The system must:
 
 Do not process real payments until a suitable payment provider and approved financial workflow have been configured.
 
-Do not present WeNaijaHealth as a licensed lender, insurer, or financial institution unless it has the necessary authorisations.
+Do not present HealthSure Connect as a licensed lender, insurer, or financial institution unless it has the necessary authorisations.
 
 Before launching this model, obtain legal and regulatory review and establish agreements covering the funds, repayments, defaults, cancellations, and responsibility for coverage.
 
@@ -477,7 +477,7 @@ If information is unavailable, explain that the team needs to verify the relevan
 
 9. AGENCY CONNECTION AND SECURE DATA TRANSFER
 
-WeNaijaHealth intends to establish working relationships with the NHIA, Kwara State health insurance authorities, and other state schemes.
+HealthSure Connect intends to establish working relationships with the NHIA, Kwara State health insurance authorities, and other state schemes.
 
 Design the architecture to support authorised data transfer.
 
@@ -511,7 +511,7 @@ Enrolment status
 
 Display separate statuses for:
 
-- WeNaijaHealth registration completed.
+- HealthSure Connect registration completed.
 - Information reviewed.
 - Eligibility assessment pending.
 - Submitted to the agency.
@@ -522,7 +522,7 @@ Display separate statuses for:
 
 Only the relevant agency or an authorised source can confirm official enrolment and coverage.
 
-Do not show a participant as insured just because their information has been entered into WeNaijaHealth.
+Do not show a participant as insured just because their information has been entered into HealthSure Connect.
 
 ---
 
@@ -593,13 +593,13 @@ Registration confirmation SMS
 
 Create a multilingual template similar to:
 
-"Thank you for registering with WeNaijaHealth. Your reference number is {reference_number}. We will guide you through the next steps. This message does not confirm that your health insurance is active. For help, contact {support_contact}."
+"Thank you for registering with HealthSure Connect. Your reference number is {reference_number}. We will guide you through the next steps. This message does not confirm that your health insurance is active. For help, contact {support_contact}."
 
 Translate and review the template in Yoruba, Hausa, and Igbo.
 
 Registration confirmation email
 
-Subject: Your WeNaijaHealth Registration Confirmation
+Subject: Your HealthSure Connect Registration Confirmation
 
 Include:
 
@@ -609,7 +609,7 @@ Include:
 - A brief explanation of the next steps.
 - Link to check registration status.
 - Contact information for support.
-- A clear note explaining that registration with WeNaijaHealth does not itself activate insurance coverage.
+- A clear note explaining that registration with HealthSure Connect does not itself activate insurance coverage.
 
 Additional notifications
 
@@ -653,7 +653,7 @@ Do not require an email address from users who do not have one.
 
 12. ADMINISTRATOR DASHBOARD
 
-Build a secure dashboard for the WeNaijaHealth team.
+Build a secure dashboard for the HealthSure Connect team.
 
 Overview metrics
 
@@ -981,4 +981,4 @@ Never fabricate:
 
 The final application must help an informal worker understand health insurance, register for assistance, navigate an official enrolment pathway, and follow the progress of their case.
 
-Build WeNaijaHealth as an accessible bridge between Nigeria's informal workers and legitimate health insurance—not merely as a website that collects names.
+Build HealthSure Connect as an accessible bridge between Nigeria's informal workers and legitimate health insurance—not merely as a website that collects names.

@@ -3,11 +3,13 @@ import "./globals.css";
 import { ClientProviders } from "@/components/client-providers";
 
 export const metadata: Metadata = {
-  title: "WeNaijaHealth — Your Work Shouldn't Cost You Your Health",
+  metadataBase: new URL(process.env.NEXTAUTH_URL || 'https://healthsureconnect.org'),
+  title: "HealthSure Connect — Your Work Shouldn't Cost You Your Health",
   description:
-    "WeNaijaHealth helps informal workers across Nigeria explore health insurance options, find official registration pathways, and get support through the process. Available in English, Pidgin, Yorùbá, Hausa, and Igbo.",
+    "HealthSure Connect helps informal workers across Nigeria explore health insurance options, find official registration pathways, and get support through the process. Available in English, Pidgin, Yorùbá, Hausa, and Igbo.",
   keywords: [
-    "WeNaijaHealth",
+    "HealthSure Connect",
+    "HealthSure",
     "health insurance Nigeria",
     "informal workers",
     "market traders",
@@ -17,16 +19,16 @@ export const metadata: Metadata = {
     "health coverage Nigeria",
   ],
   openGraph: {
-    title: "WeNaijaHealth — Your Work Shouldn't Cost You Your Health",
+    title: "HealthSure Connect — Your Work Shouldn't Cost You Your Health",
     description:
       "Helping informal workers discover, understand, and access health insurance in Nigeria.",
     type: "website",
     locale: "en_NG",
-    images: [{ url: "/wenaijahealth-logo.jpeg", width: 1280, height: 440, alt: "WeNaijaHealth" }],
+    images: [{ url: "/healthsure-connect-logo.jpeg", width: 1280, height: 440, alt: "HealthSure Connect" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/wenaijahealth-logo.jpeg"],
+    images: ["/healthsure-connect-logo.jpeg"],
   },
 };
 

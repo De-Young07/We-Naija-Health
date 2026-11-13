@@ -1,4 +1,4 @@
-// Prisma Schema — WeNaijaHealth
+// Prisma Schema — HealthSure Connect
 // PostgreSQL on Supabase
 
 generator client {

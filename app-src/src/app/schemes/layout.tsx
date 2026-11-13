@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Health Insurance Schemes — WeNaijaHealth',
+  title: 'Health Insurance Schemes — HealthSure Connect',
   description: 'Explore verified health insurance schemes available for informal workers in Nigeria. Compare eligibility, costs, and benefits.',
 };
 

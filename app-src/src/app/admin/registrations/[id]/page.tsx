@@ -151,11 +151,11 @@ export default function RegistrationDetailPage({
 
   // Pre-formatted messages for WhatsApp quick outreach
   const waIntroEnglish = encodeURIComponent(
-    `Hello ${reg.fullName}, thank you for registering on WeNaijaHealth! Your reference code is ${reg.referenceNumber}. I'm reaching out to help connect you with KwaraCare / NHIA health coverage near ${reg.lga || reg.state}. When is a good time for a quick 2-minute phone call?`
+    `Hello ${reg.fullName}, thank you for registering on HealthSure Connect! Your reference code is ${reg.referenceNumber}. I'm reaching out to help connect you with KwaraCare / NHIA health coverage near ${reg.lga || reg.state}. When is a good time for a quick 2-minute phone call?`
   );
 
   const waIntroPidgin = encodeURIComponent(
-    `Kóóyo ${reg.fullName}! Thank you as you register on WeNaijaHealth (Ref: ${reg.referenceNumber}). We dey reach out to help you get KwaraCare / NHIA health insurance make hospital bills no choke your business. When you go free make we give you short 2-minute call?`
+    `Kóóyo ${reg.fullName}! Thank you as you register on HealthSure Connect (Ref: ${reg.referenceNumber}). We dey reach out to help you get KwaraCare / NHIA health insurance make hospital bills no choke your business. When you go free make we give you short 2-minute call?`
   );
 
   const waChecklist = encodeURIComponent(

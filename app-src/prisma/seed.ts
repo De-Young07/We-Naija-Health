@@ -4,11 +4,11 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Seeding WeNaijaHealth database...');
+  console.log('🌱 Seeding HealthSure Connect database...');
 
-  // Default hashed password for initial admin/agent accounts: "WeNaijaPilot2026!"
+  // Default hashed password for initial admin/agent accounts: "HealthSurePilot2026!"
   const salt = await bcrypt.genSalt(10);
-  const defaultPasswordHash = await bcrypt.hash('WeNaijaPilot2026!', salt);
+  const defaultPasswordHash = await bcrypt.hash('HealthSurePilot2026!', salt);
 
   // 1. Seed Team Members
   const teamMembers = [
@@ -24,12 +24,12 @@ async function main() {
     },
     {
       name: 'Saleemah Hamzat',
-      email: 'saleemah@wenaijahealth.org',
+      email: 'saleemah@healthsureconnect.org',
       role: UserRole.AGENT,
     },
     {
       name: 'Jimoh Habeebullahi',
-      email: 'habeeb@wenaijahealth.org',
+      email: 'habeeb@healthsureconnect.org',
       role: UserRole.AGENT,
     },
   ];
@@ -85,7 +85,7 @@ async function main() {
       ],
       facilities: '47 accredited Primary Healthcare Centres and General Hospitals across all 16 LGAs in Kwara State',
       registrationSteps: [
-        'Walk into any accredited KWHIA enrollment centre or register via WeNaijaHealth desk',
+        'Walk into any accredited KWHIA enrollment centre or register via HealthSure Connect desk',
         'Present 11-digit National Identification Number (NIN)',
         'Undergo biometric photograph and fingerprint capture',
         'Pay premium (₦1,500 monthly or ₦15,500 annually) via Remita or approved bank slip',

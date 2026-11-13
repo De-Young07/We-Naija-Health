@@ -19,7 +19,7 @@ export function teamNotificationEmail(): string {
 
 export function fromEmail(): string {
   // Use verified custom domain if provided, otherwise fallback to Resend's default onboarding address
-  return process.env.RESEND_FROM_EMAIL || 'WeNaijaHealth <onboarding@resend.dev>';
+  return process.env.RESEND_FROM_EMAIL || 'HealthSure Connect <onboarding@resend.dev>';
 }
 
 interface SendEmailParams {

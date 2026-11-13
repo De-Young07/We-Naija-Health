@@ -7,20 +7,20 @@ import { Footer } from '@/components/footer';
 
 const FAQS = [
   {
-    q: 'Is WeNaijaHealth a government agency?',
-    a: 'No. WeNaijaHealth is an independent access and navigation platform. We are not a government agency, insurance provider, or financial institution. We help connect informal workers with official registration pathways.',
+    q: 'Is HealthSure Connect a government agency?',
+    a: 'No. HealthSure Connect is an independent access and navigation platform. We are not a government agency, insurance provider, or financial institution. We help connect informal workers with official registration pathways.',
   },
   {
-    q: 'Does registering on WeNaijaHealth mean I have insurance?',
-    a: 'No. Registration on WeNaijaHealth expresses your interest and helps us connect you with the right programme. Official insurance coverage is activated only by the relevant scheme authority after their own verification and enrollment process.',
+    q: 'Does registering on HealthSure Connect mean I have insurance?',
+    a: 'No. Registration on HealthSure Connect expresses your interest and helps us connect you with the right programme. Official insurance coverage is activated only by the relevant scheme authority after their own verification and enrollment process.',
   },
   {
     q: 'Is this free?',
-    a: 'Yes. Using WeNaijaHealth is completely free. There are no hidden charges. The health insurance schemes themselves may have their own contribution costs, which we clearly display.',
+    a: 'Yes. Using HealthSure Connect is completely free. There are no hidden charges. The health insurance schemes themselves may have their own contribution costs, which we clearly display.',
   },
   {
     q: 'What languages are supported?',
-    a: 'WeNaijaHealth is available in 5 languages: English, Nigerian Pidgin (Naija), Yorùbá, Hausa, and Igbo. You can switch languages at any time using the 🌐 button.',
+    a: 'HealthSure Connect is available in 5 languages: English, Nigerian Pidgin (Naija), Yorùbá, Hausa, and Igbo. You can switch languages at any time using the 🌐 button.',
   },
   {
     q: 'How is my data protected?',
@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'Can I get financial assistance with my premium?',
-    a: 'Some programmes offer subsidised rates for qualifying individuals. WeNaijaHealth can also explore whether reimbursement or financial assistance options are available. All assistance is subject to eligibility and approval — it is never guaranteed.',
+    a: 'Some programmes offer subsidised rates for qualifying individuals. HealthSure Connect can also explore whether reimbursement or financial assistance options are available. All assistance is subject to eligibility and approval — it is never guaranteed.',
   },
   {
     q: 'I don\'t have a smartphone. Can I still register?',
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="container-wn">
             <h1 className="about-headline animate-fade-in-up">{dict.navAbout} {dict.siteName}</h1>
             <p className="about-subtext animate-fade-in-up stagger-1">
-              WeNaijaHealth exists because we believe that every Nigerian — whether you sell in a market, 
+              HealthSure Connect exists because we believe that every Nigerian — whether you sell in a market, 
               drive a taxi, or work from your own shop — deserves to understand and access quality healthcare 
               without confusion or financial ruin.
             </p>
@@ -126,7 +126,7 @@ export default function AboutPage() {
               <div className="card contact-card">
                 <div className="contact-icon">📧</div>
                 <h3>Email</h3>
-                <a href="mailto:Team.wenaijahealth@gmail.com" className="contact-detail">Team.wenaijahealth@gmail.com</a>
+                <a href="mailto:Team.healthsureconnect@gmail.com" className="contact-detail">Team.healthsureconnect@gmail.com</a>
                 <p className="contact-note">We respond within 24 hours</p>
               </div>
               <div className="card contact-card">

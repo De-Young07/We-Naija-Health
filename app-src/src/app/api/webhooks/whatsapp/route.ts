@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
   const token = searchParams.get('hub.verify_token');
   const challenge = searchParams.get('hub.challenge');
 
-  const configuredToken = process.env.WHATSAPP_VERIFY_TOKEN || 'wenaijahealth_verify_token_2026';
+  const configuredToken = process.env.WHATSAPP_VERIFY_TOKEN || 'healthsure_verify_token_2026';
 
   if (mode === 'subscribe' && token === configuredToken) {
     console.log('[WhatsApp Webhook] Handshake verified successfully with Meta!');

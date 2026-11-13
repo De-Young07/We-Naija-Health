@@ -1,4 +1,4 @@
-# WeNaijaHealth — Production Deployment Pre-Flight Checklist
+# HealthSure Connect — Production Deployment Pre-Flight Checklist
 > **Date:** November 2026  
 > **Target Platforms:** Vercel (Recommended for Next.js Frontend & API) + Supabase (PostgreSQL Database)  
 > **Status:** All codebases compiled, database seeded, schemas synced
@@ -35,7 +35,7 @@ Set these exact environment variables in your hosting provider's dashboard (**Pr
 | `RESEND_API_KEY` | Your Resend API key (e.g. `re_...`) from your local `.env` | 🔒 Yes |
 | `TEAM_NOTIFICATION_EMAIL` | `team.accesscare@gmail.com` | No |
 | `NEXTAUTH_SECRET` | Generate a 32-character random string (e.g., `openssl rand -base64 32`) | 🔒 Yes |
-| `NEXTAUTH_URL` | Your live production domain (e.g., `https://wenaijahealth.org` or `https://we-naija-health.vercel.app`) | No |
+| `NEXTAUTH_URL` | Your live production domain (e.g., `https://healthsureconnect.org` or `https://healthsure-connect.vercel.app`) | No |
 
 ---
 
@@ -59,7 +59,7 @@ Set these exact environment variables in your hosting provider's dashboard (**Pr
 4. **Add Environment Variables:**
    - Copy-paste the 6 variables from the table above.
 5. **Click "Deploy":**
-   - Vercel builds the project in ~45 seconds and gives you an instant live URL (e.g. `https://we-naija-health.vercel.app`).
+   - Vercel builds the project in ~45 seconds and gives you an instant live URL (e.g. `https://healthsure-connect.vercel.app`).
 
 ---
 
@@ -76,7 +76,7 @@ Once deployed, verify these 5 critical workflows on the live production URL:
 2. **End-to-End Registration Test:**
    - Navigate to `/register`.
    - Submit a test registration (e.g., test market trader with phone `080XXXXXXXX`).
-   - Check confirmation screen: verify reference code appears (`WNH-YYYYMMDD-XXXXX`).
+   - Check confirmation screen: verify reference code appears (`HSC-YYYYMMDD-XXXXX`).
 
 3. **Email Notification Check:**
    - Check the inbox of `team.accesscare@gmail.com`.
@@ -91,6 +91,6 @@ Once deployed, verify these 5 critical workflows on the live production URL:
 
 5. **Custom Domain Setup (Optional):**
    - On Vercel: go to **Project Settings → Domains**.
-   - Add your custom domain (e.g. `wenaijahealth.org`).
+   - Add your custom domain (e.g. `healthsureconnect.org`).
    - Update DNS records at your domain registrar (A record to `76.76.21.21`).
 

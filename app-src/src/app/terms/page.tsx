@@ -18,8 +18,8 @@ export default function TermsOfUsePage() {
             <div className="legal-section">
               <h2>1. Agreement & Platform Purpose</h2>
               <p>
-                By using <strong>WeNaijaHealth</strong>, you agree to these Terms of Use. 
-                WeNaijaHealth is a free civic and community health technology service designed to simplify the discovery of, and connection to, official government-regulated health insurance schemes in Nigeria.
+                By using <strong>HealthSure Connect</strong>, you agree to these Terms of Use. 
+                HealthSure Connect is a free civic and community health technology service designed to simplify the discovery of, and connection to, official government-regulated health insurance schemes in Nigeria.
               </p>
             </div>
 
@@ -27,7 +27,7 @@ export default function TermsOfUsePage() {
               <h2>2. Important Legal Disclaimers</h2>
               <div className="warning-callout">
                 <p>
-                  ⚠️ <strong>Not an Insurance Company:</strong> WeNaijaHealth is not an insurer, Health Maintenance Organisation (HMO), broker, or hospital. Registering on this platform expresses your interest in enrolling and authorizes our team to assist you. <strong>It does not automatically grant you active health insurance coverage.</strong>
+                  ⚠️ <strong>Not an Insurance Company:</strong> HealthSure Connect is not an insurer, Health Maintenance Organisation (HMO), broker, or hospital. Registering on this platform expresses your interest in enrolling and authorizes our team to assist you. <strong>It does not automatically grant you active health insurance coverage.</strong>
                 </p>
                 <p>
                   ⚠️ <strong>Official Policy Activation:</strong> Official insurance coverage, biometric identification cards, and hospital access codes are issued exclusively by the respective scheme authority (e.g., Kwara State Health Insurance Agency or the National Health Insurance Authority) upon verification of your credentials and payment of official statutory contributions where applicable.
@@ -38,7 +38,7 @@ export default function TermsOfUsePage() {
             <div className="legal-section">
               <h2>3. Free Service Guarantee</h2>
               <p>
-                Accessing WeNaijaHealth, using our online scheme directory, and receiving phone/WhatsApp guidance from our triage agents is <strong>100% free of charge</strong>. 
+                Accessing HealthSure Connect, using our online scheme directory, and receiving phone/WhatsApp guidance from our triage agents is <strong>100% free of charge</strong>. 
                 Our team members and field agents will <strong>never</strong> ask you to transfer personal registration fees to any individual bank account. 
                 All scheme premium contributions (e.g., ₦1,500/month for KwaraCare) are paid directly through official government revenue platforms (such as Remita or designated agency bank collection counters).
               </p>

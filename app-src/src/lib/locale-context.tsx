@@ -21,7 +21,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   // Restore from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('wenaija-locale') as Locale | null;
+    const saved = localStorage.getItem('healthsure-locale') as Locale | null;
     if (saved && ['en', 'pcm', 'yo', 'ha', 'ig'].includes(saved)) {
       setLocaleState(saved);
       setDict(getDictionary(saved));
@@ -31,7 +31,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);
     setDict(getDictionary(newLocale));
-    localStorage.setItem('wenaija-locale', newLocale);
+    localStorage.setItem('healthsure-locale', newLocale);
     document.documentElement.lang = newLocale;
   }, []);
 

@@ -1,7 +1,7 @@
 # Master Build Plan & Execution Roadmap
-## WeNaijaHealth: Pilot Operation to National Scale
+## HealthSure Connect: Pilot Operation to National Scale
 
-**Document Reference:** `WNH-BP-2026-V1`  
+**Document Reference:** `HSC-BP-2026-V1`  
 **Target:** Live Pilot Readiness (Tomorrow Morning) + Long-term Reusable Architecture  
 **Stack:** Next.js (App Router), TypeScript, Tailwind CSS / Vanilla Design Tokens, PostgreSQL / Prisma ORM
 
@@ -12,7 +12,7 @@
 The master build plan balances **immediate velocity** (to guarantee flawless execution for tomorrow's pilot) with **engineering rigor** (ensuring the codebase is clean, modular, and reusable without requiring a rewrite next week).
 
 ```
-                                      WeNaijaHealth Architecture
+                                      HealthSure Connect Architecture
                                       
   +-------------------------------------------------------------------------------------------------+
   |                                        CLIENT TIER                                              |
@@ -37,7 +37,7 @@ The master build plan balances **immediate velocity** (to guarantee flawless exe
   |  +---------------------------------------------v---------------------------------------------+  |
   |  | Business Logic & Service Adapters:                                                        |  |
   |  | - i18n Engine (Type-safe dictionary: EN, YO, HA, IG, PCM - Nigerian Pidgin)               |  |
-  |  | - Reference Generator (Cryptographically random, collision-checked: WNH-YYYY-XXXXXX)      |  |
+  |  | - Reference Generator (Cryptographically random, collision-checked: HSC-YYYY-XXXXXX)      |  |
   |  | - Notification Service (Adapter with Multi-provider: Termii SMS, Resend, Mock Fallback)   |  |
   |  | - Agency Integration Adapter (NHIA / KwaraCare integration contracts)                     |  |
   |  | - Double-Entry Financial Ledger (Integer Kobo units, balance reconciliation)              |  |
@@ -81,7 +81,7 @@ The master build plan balances **immediate velocity** (to guarantee flawless exe
                   * Step 4: Household coverage preferences.
                   * Step 5: Plain-language NDPA consent and review.
                 - LocalStorage auto-save to ensure form recovery on signal loss.
-                - Generate formatted reference receipt (`WNH-2026-XXXXXX`) with 1-tap WhatsApp share.
+                - Generate formatted reference receipt (`HSC-2026-XXXXXX`) with 1-tap WhatsApp share.
 
 [21:45 - 22:30] Step 3: Verified Scheme Directory & Assistance Module
                 - Build Scheme Explorer pre-seeded with KwaraCare and NHIA GIFSHIP data.
@@ -111,15 +111,15 @@ The master build plan balances **immediate velocity** (to guarantee flawless exe
 1. **Device Readiness:**
    - Charge phones and power banks to 100%.
    - Ensure mobile data (MTN / Airtel / Glo) is active on devices.
-   - Open `wenaijahealth.com.ng` in Chrome and bookmark the Assistant Portal URL.
+   - Open `healthsureconnect.com.ng` in Chrome and bookmark the Assistant Portal URL.
 2. **Smoke Test Run:**
    - Submit one test registration under the name `PILOT TESTER` in Yoruba and confirm it appears in the Admin Dashboard.
    - Delete or mark test record as `TEST_DATA`.
 
 ### 09:00 – 12:30 (Market Intake & Field Engagement)
 1. **The Engagement Script (For POS Operators / Assistants):**
-   - *English:* "Good morning ma/sir. We are from WeNaijaHealth. We are helping market traders understand how to get government health insurance so you don't have to pay full hospital bills from your pocket when sickness comes. Registration takes only 2 minutes on our phone."
-   - *Pidgin:* "Good morning well-done ma/sir! We dey from WeNaijaHealth. We wan help market people register for government health insurance, so dat hospital bills no go shake your business when sickness come. Di register na just 2 minutes for our phone."
+   - *English:* "Good morning ma/sir. We are from HealthSure Connect. We are helping market traders understand how to get government health insurance so you don't have to pay full hospital bills from your pocket when sickness comes. Registration takes only 2 minutes on our phone."
+   - *Pidgin:* "Good morning well-done ma/sir! We dey from HealthSure Connect. We wan help market people register for government health insurance, so dat hospital bills no go shake your business when sickness come. Di register na just 2 minutes for our phone."
 2. **Execution Steps:**
    - Open language picker -> let participant pick Pidgin (Naija) / Yoruba / Hausa / Igbo / English.
    - Enter full name, phone number, and trade.

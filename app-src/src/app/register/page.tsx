@@ -50,19 +50,19 @@ const NIGERIAN_STATES = [
 function useDraft(data: FormData, step: number) {
   useEffect(() => {
     try {
-      localStorage.setItem('wenaija-draft', JSON.stringify({ data, step, ts: Date.now() }));
+      localStorage.setItem('healthsure-draft', JSON.stringify({ data, step, ts: Date.now() }));
     } catch { /* silently fail — storage may be full */ }
   }, [data, step]);
 }
 
 function loadDraft(): { data: FormData; step: number } | null {
   try {
-    const raw = localStorage.getItem('wenaija-draft');
+    const raw = localStorage.getItem('healthsure-draft');
     if (!raw) return null;
     const parsed = JSON.parse(raw);
     // Expire after 24h
     if (Date.now() - parsed.ts > 86400000) {
-      localStorage.removeItem('wenaija-draft');
+      localStorage.removeItem('healthsure-draft');
       return null;
     }
     return { data: parsed.data, step: parsed.step };
@@ -197,7 +197,7 @@ export default function RegisterPage() {
 
       setRefNumber(result.referenceNumber);
       setSubmitted(true);
-      localStorage.removeItem('wenaija-draft');
+      localStorage.removeItem('healthsure-draft');
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     } finally {
@@ -229,7 +229,7 @@ export default function RegisterPage() {
 
               <div className="confirm-actions">
                 <a
-                  href={`https://wa.me/?text=${encodeURIComponent(`I just registered with WeNaijaHealth! My reference: ${refNumber}`)}`}
+                  href={`https://wa.me/?text=${encodeURIComponent(`I just registered with HealthSure Connect! My reference: ${refNumber}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"

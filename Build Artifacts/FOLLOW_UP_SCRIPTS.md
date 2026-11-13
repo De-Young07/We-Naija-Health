@@ -1,4 +1,4 @@
-# WeNaijaHealth — Standard Follow-Up Communication Runbook
+# HealthSure Connect — Standard Follow-Up Communication Runbook
 > **Version:** 1.0 (Pilot Operational Standard)  
 > **Target Audience:** Field Outreach Agents, Triage Leads, Community Desk  
 > **Languages:** Standard Nigerian English & Nigerian Pidgin (PCM)  
@@ -11,7 +11,7 @@
 *Sent automatically or triggered by the first responder once registration appears on the dashboard.*
 
 ### English Version
-> "Hello **{{fullName}}**, thank you for registering on **WeNaijaHealth**!  
+> "Hello **{{fullName}}**, thank you for registering on **HealthSure Connect**!  
 > Your registration reference is: **{{referenceNumber}}**.  
 > 
 > We noticed you work in **{{lga/community}}** and need health insurance coverage for **{{coverageType}}**.  
@@ -20,7 +20,7 @@
 > If you have an urgent question before we call, reply directly to this message. We dey for you!"
 
 ### Nigerian Pidgin Version (Naija)
-> "Kóóyo / Well done **{{fullName}}**! Thank you as you register for **WeNaijaHealth**!  
+> "Kóóyo / Well done **{{fullName}}**! Thank you as you register for **HealthSure Connect**!  
 > Your registration number na: **{{referenceNumber}}**.  
 > 
 > We see say you dey work around **{{lga/community}}** and you dey find better health insurance for **{{coverageType}}**.  
@@ -43,7 +43,7 @@
 6. **Appointment / Next Step Booking:** Fix a date to meet field agent at the market or visit the clinic.
 
 ### English Script
-> **Agent:** "Good day Mr./Mrs. **{{fullName}}**, my name is **{{agentName}}** from WeNaijaHealth. I am calling regarding your health insurance registration with reference **{{referenceNumber}}**. Is this a convenient time to spend 3 minutes with you?"  
+> **Agent:** "Good day Mr./Mrs. **{{fullName}}**, my name is **{{agentName}}** from HealthSure Connect. I am calling regarding your health insurance registration with reference **{{referenceNumber}}**. Is this a convenient time to spend 3 minutes with you?"  
 > 
 > *(If yes)*  
 > **Agent:** "First, we want to appreciate your hard work in **{{market/community}}**. We received your request to get healthcare coverage for yourself and your family. Health bills can swallow one's profit, so our goal is to connect you directly to the official government health scheme where you can see a doctor, get tests, and collect malaria or general medications without paying cash from pocket.  
@@ -58,7 +58,7 @@
 > **Agent:** "Great! To complete your biometric card, you only need your NIN and one passport photo. We have a registration desk at **{{centerOrAgentLocation}}**, or our partner agent can meet you right in the market on **{{day}}**. Which one works easier for you?"
 
 ### Nigerian Pidgin Script (Naija)
-> **Agent:** "Good afternoon/morning **{{fullName}}**, my name na **{{agentName}}** from WeNaijaHealth. I dey call you on top the health insurance form wey you submit, your reference na **{{referenceNumber}}**. You get 2 to 3 minutes make we yarn small?"  
+> **Agent:** "Good afternoon/morning **{{fullName}}**, my name na **{{agentName}}** from HealthSure Connect. I dey call you on top the health insurance form wey you submit, your reference na **{{referenceNumber}}**. You get 2 to 3 minutes make we yarn small?"  
 > 
 > *(If yes)*  
 > **Agent:** "Welldone for the work wey you dey do for **{{market/community}}**! We know how market and business dey go, and sickness na one thing wey fit wipe out person profit and savings sharp-sharp if sickness enter. Na why we dey help our people link up with real government health insurance so dat if body do you one kind, you go hospital, dem treat you, give you drugs, and you no go break bank.  
@@ -109,5 +109,5 @@
 4. Do you need us to add your spouse or children to the household package?
 
 > [!TIP]
-> Keep all calls under 4 minutes. Record notes immediately into the **WeNaijaHealth Admin Dashboard** under the participant's record with the exact outcome tag (**REACHED**, **DOCUMENTS_READY**, or **ENROLLED**).
+> Keep all calls under 4 minutes. Record notes immediately into the **HealthSure Connect Admin Dashboard** under the participant's record with the exact outcome tag (**REACHED**, **DOCUMENTS_READY**, or **ENROLLED**).
 

@@ -1,10 +1,10 @@
 import { TranslationDictionary } from './types';
 
 export const yo: TranslationDictionary = {
-  siteName: 'WeNaijaHealth',
+  siteName: 'HealthSure Connect',
   tagline: 'Iṣẹ́ rẹ kò gbọdọ̀ jẹ́ ìlera rẹ.',
   heroHeadline: 'Iṣẹ́ Rẹ Kò Gbọdọ̀ Jẹ́ Ìlera Rẹ.',
-  heroSubtext: 'Bóyá o ń tà lójà, o ní iṣẹ́ kékeré, tàbí o ń ṣiṣẹ́ fún ara rẹ — láti mọ̀ nípa ètò ìbánisọ̀rọ̀ ìlera kò gbọdọ̀ nira. WeNaijaHealth máa ran ọ́ lọ́wọ́ láti rí àwọn àṣàyàn rẹ, wá ọ̀nà ìforúkọsílẹ̀ tó tọ́, àti gbà ìrànlọ́wọ́ nínú ìlànà náà.',
+  heroSubtext: 'Bóyá o ń tà lójà, o ní iṣẹ́ kékeré, tàbí o ń ṣiṣẹ́ fún ara rẹ — láti mọ̀ nípa ètò ìbánisọ̀rọ̀ ìlera kò gbọdọ̀ nira. HealthSure Connect máa ran ọ́ lọ́wọ́ láti rí àwọn àṣàyàn rẹ, wá ọ̀nà ìforúkọsílẹ̀ tó tọ́, àti gbà ìrànlọ́wọ́ nínú ìlànà náà.',
 
   navHome: 'Ilé',
   navRegister: 'Forúkọsílẹ̀',
@@ -26,7 +26,7 @@ export const yo: TranslationDictionary = {
   step3Desc: 'Tẹ̀lé ọ̀nà ìforúkọsílẹ̀ ìjọba tó tọ́ kí o sì mọ̀ bóyá o lè gba ìrànlọ́wọ́ owó.',
 
   sectionWhoWeHelp: 'Àwọn Tí A Ń Ràn Lọ́wọ́',
-  sectionHowItWorks: 'Bí WeNaijaHealth Ṣe Ń Ṣiṣẹ́',
+  sectionHowItWorks: 'Bí HealthSure Connect Ṣe Ń Ṣiṣẹ́',
   sectionUnderstandInsurance: 'Mọ̀ Nípa Ètò Ìlera',
   sectionSchemes: 'Wo Àwọn Ètò Tó Wà',
   sectionPaymentSupport: 'Ìrànlọ́wọ́ Owó àti Ìsanwó Rírọ̀',
@@ -34,7 +34,7 @@ export const yo: TranslationDictionary = {
   sectionFAQ: 'Àwọn Ìbéèrè Tí A Sábà Bí',
   sectionContact: 'Kàn Sí Wa',
 
-  regTitle: 'Forúkọsílẹ̀ Pẹ̀lú WeNaijaHealth',
+  regTitle: 'Forúkọsílẹ̀ Pẹ̀lú HealthSure Connect',
   regStepOf: 'Ìgbésẹ̀ {current} nínú {total}',
   regStep1Title: 'Nípa Rẹ',
   regStep2Title: 'Iṣẹ́ Rẹ',
@@ -72,7 +72,7 @@ export const yo: TranslationDictionary = {
   coverageFamily: 'Èmi àti ìdílé mi',
 
   consentTitle: 'Àyẹ̀wò àti Ìfohùnṣọ̀kan',
-  consentDataCollection: 'Mo gbà pé WeNaijaHealth lè gba àlàyé mi láti ran mi lọ́wọ́ láti rí ètò ìlera.',
+  consentDataCollection: 'Mo gbà pé HealthSure Connect lè gba àlàyé mi láti ran mi lọ́wọ́ láti rí ètò ìlera.',
   consentDataSharing: 'Mo gbà pé wọ́n lè pín àlàyé mi pẹ̀lú ètò ìlera tí mo yan.',
   consentReimbursement: 'Mo fẹ́ kí wọ́n rò mí sí ìrànlọ́wọ́ owó (tí ó bá wà).',
   consentCommunications: 'Mo gbà láti máa gba ìròyìn lórí SMS àti ímeèlì nípa ìforúkọsílẹ̀ mi.',
@@ -82,7 +82,7 @@ export const yo: TranslationDictionary = {
   btnBack: 'Padà Sẹ́yìn',
 
   confirmTitle: 'Ìforúkọsílẹ̀ Ti Yọrí Sí Àṣeyọrí!',
-  confirmMessage: 'A dúpẹ́ pé o ti forúkọsílẹ̀ pẹ̀lú WeNaijaHealth. A ó ran ọ́ lọ́wọ́ láti mọ̀ ìgbésẹ̀ tó kàn.',
+  confirmMessage: 'A dúpẹ́ pé o ti forúkọsílẹ̀ pẹ̀lú HealthSure Connect. A ó ran ọ́ lọ́wọ́ láti mọ̀ ìgbésẹ̀ tó kàn.',
   confirmRefLabel: 'Nọ́mbà Ìtọ́kasí Rẹ',
   confirmDisclaimer: 'Ètò ìlera rẹ ní láti jẹ́ fìdí múlẹ̀ nípasẹ̀ àjọ ètò tó yẹ. Ìforúkọsílẹ̀ yìí kìí ṣe pé ètò ìlera rẹ ti bẹ̀rẹ̀.',
   btnShareWhatsApp: 'Pín lórí WhatsApp',
@@ -115,5 +115,5 @@ export const yo: TranslationDictionary = {
 
   footerPrivacy: 'Ìlànà Àṣírí',
   footerTerms: 'Àwọn Òfin Lílo',
-  footerDisclaimer: 'WeNaijaHealth jẹ́ pẹpẹ ìrànlọ́wọ́ ọ̀tọ̀. A kìí ṣe àjọ ìjọba, ilé-iṣẹ́ ètò ìlera, tàbí ilé-iṣẹ́ owó. Ètò ìlera rẹ ni àjọ ètò tó yẹ yóò fìdí múlẹ̀ lẹ́yìn àyẹ̀wò.',
+  footerDisclaimer: 'HealthSure Connect jẹ́ pẹpẹ ìrànlọ́wọ́ ọ̀tọ̀. A kìí ṣe àjọ ìjọba, ilé-iṣẹ́ ètò ìlera, tàbí ilé-iṣẹ́ owó. Ètò ìlera rẹ ni àjọ ètò tó yẹ yóò fìdí múlẹ̀ lẹ́yìn àyẹ̀wò.',
 };

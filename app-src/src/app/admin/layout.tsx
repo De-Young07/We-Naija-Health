@@ -20,9 +20,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="admin-header-content">
           <div className="admin-brand">
             <Link href="/admin" className="admin-logo-link">
-              <span className="logo-badge">WNH</span>
+              <span className="logo-badge">HSC</span>
               <div>
-                <strong className="brand-title">WeNaijaHealth</strong>
+                <strong className="brand-title">HealthSure Connect</strong>
                 <span className="brand-subtitle">Operations & Triage Desk</span>
               </div>
             </Link>

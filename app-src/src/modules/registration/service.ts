@@ -5,13 +5,13 @@ import { RegistrationInput } from './schema';
 import { notifyTeam } from '@/modules/notifications/service';
 
 /**
- * Generate a unique reference number: WNH-YYYYMMDD-XXXXX
+ * Generate a unique reference number: HSC-YYYYMMDD-XXXXX
  */
 function generateRefNumber(): string {
   const now = new Date();
   const date = now.toISOString().slice(0, 10).replace(/-/g, '');
   const rand = Math.random().toString(36).substring(2, 7).toUpperCase();
-  return `WNH-${date}-${rand}`;
+  return `HSC-${date}-${rand}`;
 }
 
 /**

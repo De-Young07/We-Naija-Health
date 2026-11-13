@@ -186,7 +186,7 @@ export default function RegistrationsListPage() {
                   const cleanPhone = reg.phone.replace(/\D/g, '');
                   const intlPhone = cleanPhone.startsWith('0') ? '234' + cleanPhone.substring(1) : cleanPhone;
                   const waText = encodeURIComponent(
-                    `Hello ${reg.fullName}, this is WeNaijaHealth regarding your health insurance registration (${reg.referenceNumber}). How can we assist with your KwaraCare/NHIA enrollment today?`
+                    `Hello ${reg.fullName}, this is HealthSure Connect regarding your health insurance registration (${reg.referenceNumber}). How can we assist with your KwaraCare/NHIA enrollment today?`
                   );
 
                   return (

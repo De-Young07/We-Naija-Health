@@ -1,4 +1,4 @@
-// WeNaijaHealth — i18n index
+// HealthSure Connect — i18n index
 // Exports all dictionaries and provides the translation hook
 
 import { en } from './en';

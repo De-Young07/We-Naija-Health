@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
             <div className="legal-section">
               <h2>1. Our Role & Data Commitment</h2>
               <p>
-                <strong>WeNaijaHealth</strong> is an independent digital health navigation and warm handoff platform operated by AccessCare Initiative. 
+                <strong>HealthSure Connect</strong> is an independent digital health navigation and warm handoff platform operated by AccessCare Initiative. 
                 We are <strong>not</strong> an insurance provider, underwriter, or healthcare facility. 
                 Our mission is to help informal workers, artisans, market traders, and everyday Nigerians navigate, understand, and register for official government and accredited state health insurance schemes (such as KwaraCARE and the National Health Insurance Authority — NHIA).
               </p>
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Audit & Interaction Logs:</strong> Records of telephone calls, WhatsApp triage messages, and referral notes logged by our community triage agents to maintain our 24-hour response service commitment.</li>
               </ul>
               <p className="note-box">
-                🔒 <strong>Note on NIN & Biometrics:</strong> WeNaijaHealth <em>never</em> captures, stores, or processes your fingerprint biometrics, banking PINs, or BVNs on this website. Biometric capturing is conducted exclusively in person at accredited primary health centers or official agency desks.
+                🔒 <strong>Note on NIN & Biometrics:</strong> HealthSure Connect <em>never</em> captures, stores, or processes your fingerprint biometrics, banking PINs, or BVNs on this website. Biometric capturing is conducted exclusively in person at accredited primary health centers or official agency desks.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <div className="legal-section">
               <h2>5. Security & Retention</h2>
               <p>
-                All data transmitted through WeNaijaHealth is encrypted using industry-standard Transport Layer Security (TLS 1.3). 
+                All data transmitted through HealthSure Connect is encrypted using industry-standard Transport Layer Security (TLS 1.3). 
                 Data at rest is stored in secure, encrypted cloud databases adhering to international ISO 27001 standards. 
                 We retain your records for the duration of your enrollment guidance, after which you may request complete deletion at any time.
               </p>
@@ -90,7 +90,7 @@ export default function PrivacyPolicyPage() {
                 For data privacy inquiries, corrections, or deletion requests, reach out directly to our team:
               </p>
               <div className="contact-callout">
-                <p><strong>AccessCare / WeNaijaHealth Operations</strong></p>
+                <p><strong>AccessCare / HealthSure Connect Operations</strong></p>
                 <p>Email: <a href="mailto:team.accesscare@gmail.com">team.accesscare@gmail.com</a></p>
                 <p>Telephone: +234 (0) 800 100 1001</p>
                 <p>Location: Ilorin, Kwara State, Nigeria</p>

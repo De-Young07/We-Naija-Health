@@ -18,7 +18,7 @@ export function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <Image
-              src="/wenaijahealth-logo.jpeg"
+              src="/healthsure-connect-logo.jpeg"
               alt={dict.siteName}
               width={300}
               height={94}

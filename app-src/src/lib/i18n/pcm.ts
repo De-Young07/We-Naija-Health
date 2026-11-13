@@ -2,10 +2,10 @@ import { TranslationDictionary } from './types';
 
 export const pcm: TranslationDictionary = {
   // Site-wide
-  siteName: 'WeNaijaHealth',
+  siteName: 'HealthSure Connect',
   tagline: 'Your Work No Suppose Chop Your Health.',
   heroHeadline: 'Your Work No Suppose Chop Your Health.',
-  heroSubtext: 'Whether you dey sell for market, get small business, or dey work for yourself — to understand health insurance no suppose hard. WeNaijaHealth go help you find your options, show you how to register for government scheme, and support you through the process.',
+  heroSubtext: 'Whether you dey sell for market, get small business, or dey work for yourself — to understand health insurance no suppose hard. HealthSure Connect go help you find your options, show you how to register for government scheme, and support you through the process.',
 
   // Navigation
   navHome: 'Home',
@@ -31,7 +31,7 @@ export const pcm: TranslationDictionary = {
 
   // Sections
   sectionWhoWeHelp: 'Who We Dey Help',
-  sectionHowItWorks: 'How WeNaijaHealth Dey Work',
+  sectionHowItWorks: 'How HealthSure Connect Dey Work',
   sectionUnderstandInsurance: 'Understand Health Insurance',
   sectionSchemes: 'See Available Schemes',
   sectionPaymentSupport: 'Flexible Payment and Support',
@@ -40,7 +40,7 @@ export const pcm: TranslationDictionary = {
   sectionContact: 'Contact and Support',
 
   // Registration form
-  regTitle: 'Register for WeNaijaHealth',
+  regTitle: 'Register for HealthSure Connect',
   regStepOf: 'Step {current} of {total}',
   regStep1Title: 'About You',
   regStep2Title: 'Your Work',
@@ -83,7 +83,7 @@ export const pcm: TranslationDictionary = {
 
   // Step 5
   consentTitle: 'Check Everything and Agree',
-  consentDataCollection: 'I agree say WeNaijaHealth fit collect my information to help me find health insurance.',
+  consentDataCollection: 'I agree say HealthSure Connect fit collect my information to help me find health insurance.',
   consentDataSharing: 'I agree say dem fit share my information with the insurance scheme wey I choose.',
   consentReimbursement: 'I want make dem consider me for financial help (if e dey available).',
   consentCommunications: 'I agree to receive SMS and email about my registration.',
@@ -94,7 +94,7 @@ export const pcm: TranslationDictionary = {
 
   // Confirmation
   confirmTitle: 'Registration Don Complete!',
-  confirmMessage: 'Thank you say you register with WeNaijaHealth. We go help you understand the next steps.',
+  confirmMessage: 'Thank you say you register with HealthSure Connect. We go help you understand the next steps.',
   confirmRefLabel: 'Your Reference Number',
   confirmDisclaimer: 'Your insurance coverage still need to be confirmed by the official scheme. This registration no mean say your insurance don start.',
   btnShareWhatsApp: 'Share for WhatsApp',
@@ -131,5 +131,5 @@ export const pcm: TranslationDictionary = {
   // Footer
   footerPrivacy: 'Privacy Policy',
   footerTerms: 'Terms of Use',
-  footerDisclaimer: 'WeNaijaHealth na independent platform wey dey help people. We no be government agency, insurance company, or bank. Official insurance coverage na the scheme authority go confirm am after verification.',
+  footerDisclaimer: 'HealthSure Connect na independent platform wey dey help people. We no be government agency, insurance company, or bank. Official insurance coverage na the scheme authority go confirm am after verification.',
 };

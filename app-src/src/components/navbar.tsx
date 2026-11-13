@@ -21,7 +21,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="navbar-logo" id="nav-logo">
             <Image
-              src="/wenaijahealth-logo.jpeg"
+              src="/healthsure-connect-logo.jpeg"
               alt={dict.siteName}
               width={184}
               height={61}

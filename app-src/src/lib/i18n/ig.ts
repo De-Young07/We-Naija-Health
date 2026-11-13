@@ -1,10 +1,10 @@
 import { TranslationDictionary } from './types';
 
 export const ig: TranslationDictionary = {
-  siteName: 'WeNaijaHealth',
+  siteName: 'HealthSure Connect',
   tagline: 'Ọrụ Gị Ekwesịghị Iri Ahụike Gị.',
   heroHeadline: 'Ọrụ Gị Ekwesịghị Iri Ahụike Gị.',
-  heroSubtext: 'Mà ị na-ere ahịa n\'ọma ahịa, ị nwere obere azụmaahịa, ma ị na-arụ ọrụ maka onwe gị — ịghọta ịnshọransị ahụike ekwesịghị isi ike. WeNaijaHealth ga-enyere gị aka ịchọta nhọrọ gị, chọta ụzọ ndekọ aha nke gọọmentị, ma nweta nkwado site na usoro ahụ.',
+  heroSubtext: 'Mà ị na-ere ahịa n\'ọma ahịa, ị nwere obere azụmaahịa, ma ị na-arụ ọrụ maka onwe gị — ịghọta ịnshọransị ahụike ekwesịghị isi ike. HealthSure Connect ga-enyere gị aka ịchọta nhọrọ gị, chọta ụzọ ndekọ aha nke gọọmentị, ma nweta nkwado site na usoro ahụ.',
 
   navHome: 'Ụlọ',
   navRegister: 'Debanye Aha',
@@ -26,7 +26,7 @@ export const ig: TranslationDictionary = {
   step3Desc: 'Soro ụzọ ndekọ aha gọọmentị kwesịrị ekwesị wee chọpụta ma ị nwere ike ịnweta enyemaka ego.',
 
   sectionWhoWeHelp: 'Ndị Anyị Na-enyere Aka',
-  sectionHowItWorks: 'Otu WeNaijaHealth Si Arụ Ọrụ',
+  sectionHowItWorks: 'Otu HealthSure Connect Si Arụ Ọrụ',
   sectionUnderstandInsurance: 'Ghọta Ịnshọransị Ahụike',
   sectionSchemes: 'Lee Usoro Ndị Dị',
   sectionPaymentSupport: 'Nkwado Ịkwụ Ụgwọ na Ịkwụghachi',
@@ -34,7 +34,7 @@ export const ig: TranslationDictionary = {
   sectionFAQ: 'Ajụjụ Ndị A Na-ajụkarị',
   sectionContact: 'Kpọtụrụ Anyị',
 
-  regTitle: 'Debanye Aha na WeNaijaHealth',
+  regTitle: 'Debanye Aha na HealthSure Connect',
   regStepOf: 'Nzọụkwụ {current} n\'ime {total}',
   regStep1Title: 'Maka Gị',
   regStep2Title: 'Ọrụ Gị',
@@ -72,7 +72,7 @@ export const ig: TranslationDictionary = {
   coverageFamily: 'Mụ na ezinụlọ m',
 
   consentTitle: 'Nyochaa ma Kwenye',
-  consentDataCollection: 'Ekwenyere m na WeNaijaHealth nwere ike ịnakọta ozi m iji nyere m aka ịchọta ịnshọransị ahụike.',
+  consentDataCollection: 'Ekwenyere m na HealthSure Connect nwere ike ịnakọta ozi m iji nyere m aka ịchọta ịnshọransị ahụike.',
   consentDataSharing: 'Ekwenyere m na a nwere ike ịkekọrịta ozi m na usoro ịnshọransị m họpụtara.',
   consentReimbursement: 'Achọrọ m ka a tụlee m maka enyemaka ego (ma ọ dị).',
   consentCommunications: 'Ekwenyere m ịnata ozi SMS na email gbasara ndekọ aha m.',
@@ -82,7 +82,7 @@ export const ig: TranslationDictionary = {
   btnBack: 'Laghachi Azụ',
 
   confirmTitle: 'Ndekọ Aha Gara Nke Ọma!',
-  confirmMessage: 'Daalụ maka idebanye aha na WeNaijaHealth. Anyị ga-enyere gị aka ịghọta nzọụkwụ ndị ọzọ.',
+  confirmMessage: 'Daalụ maka idebanye aha na HealthSure Connect. Anyị ga-enyere gị aka ịghọta nzọụkwụ ndị ọzọ.',
   confirmRefLabel: 'Nọmba Ntụaka Gị',
   confirmDisclaimer: 'Ụlọ ọrụ nke kwesịrị ekwesị ga-ekwenye na ịnshọransị ahụike gị. Ndebanye aha a apụtaghị na ịnshọransị gị amalitela.',
   btnShareWhatsApp: 'Kekọrịta na WhatsApp',
@@ -115,5 +115,5 @@ export const ig: TranslationDictionary = {
 
   footerPrivacy: 'Amụma Nzuzo',
   footerTerms: 'Usoro Ojiji',
-  footerDisclaimer: 'WeNaijaHealth bụ ikpo okwu nke na-enyere ndị mmadụ aka n\'onwe ya. Anyị abụghị ụlọ ọrụ gọọmentị, ụlọ ọrụ ịnshọransị, ma ọ bụ ụlọ ọrụ ego. Ụlọ ọrụ usoro kwesịrị ekwesị ga-ekwenye na ịnshọransị ahụike gị mgbe nyocha gasịrị.',
+  footerDisclaimer: 'HealthSure Connect bụ ikpo okwu nke na-enyere ndị mmadụ aka n\'onwe ya. Anyị abụghị ụlọ ọrụ gọọmentị, ụlọ ọrụ ịnshọransị, ma ọ bụ ụlọ ọrụ ego. Ụlọ ọrụ usoro kwesịrị ekwesị ga-ekwenye na ịnshọransị ahụike gị mgbe nyocha gasịrị.',
 };

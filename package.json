@@ -1,8 +1,8 @@
 {
-  "name": "we-naija-health-root",
+  "name": "healthsure-connect-root",
   "version": "1.0.0",
   "private": true,
-  "description": "WeNaijaHealth root proxy for Railway and cloud deployments",
+  "description": "HealthSure Connect root proxy for Railway and cloud deployments",
   "engines": {
     "node": ">=20.9.0"
   },

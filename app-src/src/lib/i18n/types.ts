@@ -1,4 +1,4 @@
-// WeNaijaHealth — Type-safe i18n dictionary
+// HealthSure Connect — Type-safe i18n dictionary
 // 5 Languages: English (en), Nigerian Pidgin (pcm), Yoruba (yo), Hausa (ha), Igbo (ig)
 
 export type Locale = 'en' | 'pcm' | 'yo' | 'ha' | 'ig';

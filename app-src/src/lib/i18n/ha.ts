@@ -1,10 +1,10 @@
 import { TranslationDictionary } from './types';
 
 export const ha: TranslationDictionary = {
-  siteName: 'WeNaijaHealth',
+  siteName: 'HealthSure Connect',
   tagline: 'Aikinku Bai Kamata Ya Ci Lafiyarku Ba.',
   heroHeadline: 'Aikinku Bai Kamata Ya Ci Lafiyarku Ba.',
-  heroSubtext: 'Ko da yake kuna sayarwa a kasuwa, kuna da ƙaramin kasuwanci, ko kuna aiki don kanku — fahimtar inshorar lafiya bai kamata ya yi wuya ba. WeNaijaHealth zai taimaka muku gano zaɓuɓɓukanku, nemo hanyoyin rajista na hukuma, da samun taimako a cikin tsarin.',
+  heroSubtext: 'Ko da yake kuna sayarwa a kasuwa, kuna da ƙaramin kasuwanci, ko kuna aiki don kanku — fahimtar inshorar lafiya bai kamata ya yi wuya ba. HealthSure Connect zai taimaka muku gano zaɓuɓɓukanku, nemo hanyoyin rajista na hukuma, da samun taimako a cikin tsarin.',
 
   navHome: 'Gida',
   navRegister: 'Yi Rajista',
@@ -26,7 +26,7 @@ export const ha: TranslationDictionary = {
   step3Desc: 'Bi hanyar rajista ta hukuma kuma gano ko za ka iya samun taimakon kuɗi.',
 
   sectionWhoWeHelp: 'Wanda Muke Taimakawa',
-  sectionHowItWorks: 'Yadda WeNaijaHealth Ke Aiki',
+  sectionHowItWorks: 'Yadda HealthSure Connect Ke Aiki',
   sectionUnderstandInsurance: 'Fahimtar Inshorar Lafiya',
   sectionSchemes: 'Duba Shirye-Shiryen da Ake Da Su',
   sectionPaymentSupport: 'Taimakon Biyan Kuɗi Mai Sassauci',
@@ -34,7 +34,7 @@ export const ha: TranslationDictionary = {
   sectionFAQ: 'Tambayoyin da Ake Yawan Yi',
   sectionContact: 'Tuntuɓe Mu',
 
-  regTitle: 'Yi Rajista tare da WeNaijaHealth',
+  regTitle: 'Yi Rajista tare da HealthSure Connect',
   regStepOf: 'Mataki na {current} cikin {total}',
   regStep1Title: 'Game da Kai',
   regStep2Title: 'Aikinku',
@@ -72,7 +72,7 @@ export const ha: TranslationDictionary = {
   coverageFamily: 'Ni da iyalina',
 
   consentTitle: 'Dubawa da Yarda',
-  consentDataCollection: 'Na yarda cewa WeNaijaHealth na iya tattara bayananin don taimaka mini nemo inshorar lafiya.',
+  consentDataCollection: 'Na yarda cewa HealthSure Connect na iya tattara bayananin don taimaka mini nemo inshorar lafiya.',
   consentDataSharing: 'Na yarda cewa za a iya raba bayananina da shiryen inshorar da na zaɓa.',
   consentReimbursement: 'Ina son a yi la\'akari da ni don taimakon kuɗi (idan akwai).',
   consentCommunications: 'Na yarda in riƙa samun saƙonnin SMS da imel game da rajistar.',
@@ -82,7 +82,7 @@ export const ha: TranslationDictionary = {
   btnBack: 'Baya',
 
   confirmTitle: 'An Yi Nasarar Rajista!',
-  confirmMessage: 'Na gode da rajista tare da WeNaijaHealth. Za mu taimaka muku fahimtar matakai na gaba.',
+  confirmMessage: 'Na gode da rajista tare da HealthSure Connect. Za mu taimaka muku fahimtar matakai na gaba.',
   confirmRefLabel: 'Lambar Tunani',
   confirmDisclaimer: 'Dole ne hukumar da ta dace ta tabbatar da inshorar lafiyarku. Wannan rajista ba ya nufin inshorarku ta fara aiki.',
   btnShareWhatsApp: 'Raba a WhatsApp',
@@ -115,5 +115,5 @@ export const ha: TranslationDictionary = {
 
   footerPrivacy: 'Manufar Sirri',
   footerTerms: 'Sharuɗɗan Amfani',
-  footerDisclaimer: 'WeNaijaHealth dandali ne mai zaman kansa na taimako. Ba mu hukumar gwamnati ba, kamfanin inshora, ko cibiyar kuɗi. Hukumar shiri ta dace za ta tabbatar da inshorar lafiyarku bayan bincike.',
+  footerDisclaimer: 'HealthSure Connect dandali ne mai zaman kansa na taimako. Ba mu hukumar gwamnati ba, kamfanin inshora, ko cibiyar kuɗi. Hukumar shiri ta dace za ta tabbatar da inshorar lafiyarku bayan bincike.',
 };

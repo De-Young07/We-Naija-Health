@@ -1,8 +1,8 @@
 # Universal Execution Framework Benchmark & Gap Audit
-## WeNaijaHealth: Benchmarking MASTER PROMPT vs. Master Documents 1–5
+## HealthSure Connect: Benchmarking MASTER PROMPT vs. Master Documents 1–5
 
 **Document Metadata:**
-- **Project:** WeNaijaHealth (`wenaijahealth.com.ng`)
+- **Project:** HealthSure Connect (`healthsureconnect.com.ng`)
 - **Evaluation Date:** October 2026
 - **Target:** Production Readiness Audit for Pilot Operations
 - **Framework:** The Universal Execution Framework (5 Volumes, 100 Criteria)
@@ -34,7 +34,7 @@
 | **Q4** | Measurable Success Metrics | **2 / 3 (Addressed)** | Reference numbers issued, referral conversions, assistance applications, repayment rates, active POS operators. | Low |
 | **Q5** | Strategic Risks & Dependencies | **3 / 3 (Exceptional)** | Explicitly warns against claiming official agency endorsement before MOUs, claiming licensed banking/lending status, or faking coverage. | Satisfied |
 | **Q6** | Target Market Segments | **3 / 3 (Exceptional)** | Specifically profiles tomato sellers, tailors, petty traders, mechanics, artisans, with focus on Kwara State and federal schemes. | Satisfied |
-| **Q7** | Competitive Landscape & Differentiation | **2 / 3 (Addressed)** | Traditional HMOs cater to formal corporate salary earners; WeNaijaHealth uniquely targets informal daily-wage earners through POS agents and multilingual onboarding. | Low |
+| **Q7** | Competitive Landscape & Differentiation | **2 / 3 (Addressed)** | Traditional HMOs cater to formal corporate salary earners; HealthSure Connect uniquely targets informal daily-wage earners through POS agents and multilingual onboarding. | Low |
 | **Q8** | Regulatory & Legal Boundaries | **3 / 3 (Exceptional)** | Deep NDPA 2023 compliance guidelines, no banking PIN/OTP collection, disclaimers that insurance coverage starts only upon agency approval. | Satisfied |
 | **Q9** | Go-to-Market & Acquisition | **2 / 3 (Addressed)** | Community POS-agent model (₦2,000 verified incentive), market associations, word-of-mouth. | Medium |
 | **Q10** | Market Timing & Policy Context | **2 / 3 (Addressed)** | Aligns with NHIA Act 2022 (making health insurance mandatory in Nigeria) and the Vulnerable Group Fund rollout. | Low |
@@ -98,7 +98,7 @@
 | **Q10** | Multilingual & Cultural Fidelity | **3 / 3 (Exceptional)** | Five languages (English, Nigerian Pidgin, Yoruba, Hausa, Igbo) with full coverage: forms, errors, navigation, notifications, help text. | Satisfied |
 | **Q11** | Information Architecture | **3 / 3 (Exceptional)** | Flat, shallow navigation hierarchy. Users never get lost more than 2 taps deep. | Satisfied |
 | **Q12** | Form Design & Cognitive Load | **3 / 3 (Exceptional)** | 5 bite-sized screens; max 2 questions per screen; progressive disclosure; big touchable option tiles. | Satisfied |
-| **Q13** | Verification Receipt & Reference UX | **3 / 3 (Exceptional)** | Clear post-submission screen with large, scannable reference code (e.g. `WNH-2026-XXXXXX`) and 1-tap WhatsApp/SMS share button. | Satisfied |
+| **Q13** | Verification Receipt & Reference UX | **3 / 3 (Exceptional)** | Clear post-submission screen with large, scannable reference code (e.g. `HSC-2026-XXXXXX`) and 1-tap WhatsApp/SMS share button. | Satisfied |
 | **Q14** | Empty, Loading & Error States | **2 / 3 (Addressed)** | Clear failure notices without technical jargon; needs offline warning banner if connectivity drops. | Low |
 | **Q15** | Mobile Billboard Test (Krug's Law) | **3 / 3 (Exceptional)** | Passable in 3 seconds: "Your Work Shouldn't Cost You Your Health" + large "Get Started" and "Find Insurance" CTAs. | Satisfied |
 | **Q16** | Reusability of Design Tokens | **3 / 3 (Exceptional)** | Pure CSS tokens / Tailwind design utility configuration for consistent palette and spacing across all views. | Satisfied |
@@ -172,7 +172,7 @@ To ensure tomorrow's pilot is **credible, usable, simple, and reusable**, the fo
 
 1. **Pilot Location & Context:** Exactly which market/community is the pilot launching in tomorrow? (e.g., Mandate Market / Oja Oba in Ilorin, Kwara State, or a Lagos market?)
 2. **Designated Field Agents:** Who are the specific individuals (or POS agents) holding the devices tomorrow? (Pre-registering their assistant accounts avoids field delays).
-3. **Reimbursement Mode for Day 1:** Is WeNaijaHealth disbursing live float capital on Day 1, or is Day 1 focused on **"Assistance Application & Scheme Eligibility Guidance"** with subsequent payout approval? *(Recommended: Application & Eligibility mode on Day 1 to avoid regulatory and cash risk).*
+3. **Reimbursement Mode for Day 1:** Is HealthSure Connect disbursing live float capital on Day 1, or is Day 1 focused on **"Assistance Application & Scheme Eligibility Guidance"** with subsequent payout approval? *(Recommended: Application & Eligibility mode on Day 1 to avoid regulatory and cash risk).*
 4. **Primary State Scheme Featured:** Which verified scheme is the primary recommendation for tomorrow's cohort? *(Recommended: KwaraCare / Kwara State Health Insurance Agency for Kwara, or NHIA GIFSHIP nationwide).*
 5. **Live Notification Credentials:** Are live credentials for SMS (e.g. Termii / Twilio) available tonight, or should the app use the verified built-in **"Simulated Dispatch with Visible Status Indicator"** so no registration is blocked?
 6. **Support / Escalation Contact:** What real phone number or WhatsApp link should be displayed on the confirmation receipt for participants who have questions tomorrow?

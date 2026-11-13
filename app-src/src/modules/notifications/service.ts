@@ -75,8 +75,8 @@ export async function notifyTeam(event: NotificationEvent) {
 
       // 1. Send instant WhatsApp confirmation to participant
       const greetingMsg = reg.locale === 'pcm'
-        ? `Kóóyo ${reg.fullName}! Thank you as you register for WeNaijaHealth.\nYour registration code na: *${reg.referenceNumber}*.\nOur care officer go call you within 24 hours make we guide you to get KwaraCare / NHIA card near ${reg.lga || reg.state}.\nReply this message if you get any urgent question!`
-        : `Hello ${reg.fullName}, thank you for registering on WeNaijaHealth!\nYour registration code is: *${reg.referenceNumber}*.\nA care officer will call you within 24 hours to guide you to the nearest accredited clinic (KwaraCare / NHIA) near ${reg.lga || reg.state}.\nFeel free to reply directly to this WhatsApp message!`;
+        ? `Kóóyo ${reg.fullName}! Thank you as you register for HealthSure Connect.\nYour registration code na: *${reg.referenceNumber}*.\nOur care officer go call you within 24 hours make we guide you to get KwaraCare / NHIA card near ${reg.lga || reg.state}.\nReply this message if you get any urgent question!`
+        : `Hello ${reg.fullName}, thank you for registering on HealthSure Connect!\nYour registration code is: *${reg.referenceNumber}*.\nA care officer will call you within 24 hours to guide you to the nearest accredited clinic (KwaraCare / NHIA) near ${reg.lga || reg.state}.\nFeel free to reply directly to this WhatsApp message!`;
 
       const waRes = await sendWhatsAppTextMessage({
         to: reg.phone,
@@ -133,7 +133,7 @@ function buildRegistrationEmailHtml(reg: NonNullable<NotificationEvent['registra
   <!-- Header -->
   <div style="background: linear-gradient(135deg, #008751 0%, #00a86b 100%); padding: 24px 32px; color: white;">
     <h1 style="margin: 0; font-size: 20px; font-weight: 700;">🆕 New Registration</h1>
-    <p style="margin: 8px 0 0; font-size: 14px; opacity: 0.9;">WeNaijaHealth — Someone needs health insurance help</p>
+    <p style="margin: 8px 0 0; font-size: 14px; opacity: 0.9;">HealthSure Connect — Someone needs health insurance help</p>
   </div>
 
   <!-- Body -->
@@ -153,7 +153,7 @@ function buildRegistrationEmailHtml(reg: NonNullable<NotificationEvent['registra
 
     <!-- CTA -->
     <div style="margin-top: 24px; text-align: center;">
-      <a href="https://wa.me/234${reg.phone.substring(1)}?text=${encodeURIComponent(`Hello ${reg.fullName}, this is WeNaijaHealth. We received your registration (Ref: ${reg.referenceNumber}). We're here to help you get health insurance. When is a good time to talk?`)}"
+      <a href="https://wa.me/234${reg.phone.substring(1)}?text=${encodeURIComponent(`Hello ${reg.fullName}, this is HealthSure Connect. We received your registration (Ref: ${reg.referenceNumber}). We're here to help you get health insurance. When is a good time to talk?`)}"
          style="display: inline-block; background: #25D366; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">
         📱 WhatsApp ${reg.fullName}
       </a>
